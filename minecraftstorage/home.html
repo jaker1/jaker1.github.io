@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Minecraft , майнкрафт , minecraftstorage ,mc ,mods, textures,shaders,maps,моды,шейдеры,текстуры,карты">
+    <meta name="description" content="Здесь Вы можете найти моды,текстуры для игры майнкрафт. Here you will find some materials related to minecraft">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MinecraftStorage</title>
+    <link rel="shortcut icon" href="img/icon/icon.png" type="image/png">
+    <link rel="stylesheet" href="additions/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href="additions/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="animate/animate.css">
+    <!--    <link rel="stylesheet" href="additions/revealator-master/fm.revealator.jquery.css">-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="homepage">
+    <header>
+        <div class="m900">
+            <nav>
+                <li><a href="/" class="no"><img src="img/icon/iconb.png"></a></li>
+                <li><a>Mods</a>
+                    <div class="dropdown">
+                        <a href="#">All</a>
+                        <a href="">1.7.10</a>
+                    </div>
+                </li>
+                <li><a>Textures</a>
+                    <div class="dropdown">
+                        <a href="">All</a>
+                        <a href="">1.7.10</a>
+                    </div>
+                </li>
+                <li><a>Shaders</a></li>
+                <li><a>Maps</a></li>
+                <li class="search"><i class="fa fa-search unfade" aria-hidden="true"></i></li>
+                <div>
+                    <form action="" method="post">
+                        <input type="text" placeholder="Type...">
+                    </form>
+                </div>
+            </nav>
+            <div class="lang unfade">
+
+                <img src="img/eng.png" title="Click to change language" data-toggle="tooltip" data-placement="left">
+                <a href=""><img src="img/rus.png" title="Change language to russian" class="second fader" data-toggle="tooltip" data-placement="left"></a>
+
+            </div>
+            <div class="roller"></div>
+        </div>
+        <!--Header for mobile-->
+        <div class="h900">
+            <img src="img/icon/icon.png">
+
+            <div class="lang900">
+                <div class='lan'><label>Russian</label> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                <a href='' class='lanpass'>
+                    <div class='lan'><label>English</label></div>
+                </a>
+            </div>
+
+            <i class="fa fa-bars btn_toggle" aria-hidden="true"></i>
+
+            <form action=""><input type="text" placeholder="Type..."></form>
+
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+            <!--List (mods,textures...)-->
+            <div class="toggle">
+                <li><a href="/"><i class="fa fa-home"></i> Home </a></li>
+                <li><a><span class="glyphicon glyphicon-tower"></span> Mods</a>
+                    <div class="drop2">
+                        <a href='inventory?section=mods'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+
+                <li><a><span class="glyphicon glyphicon-tree-deciduous"></span> Textures</a>
+                    <div class="drop2">
+                        <a href='inventory?section=textures'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+
+                <li><a><span class="glyphicon glyphicon-grain"></span> Shaders</a>
+                    <div class="drop2">
+                        <a href='inventory?section=shaders'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+
+                <li><a><span class="glyphicon glyphicon-globe"></span> Maps</a>
+                    <div class="drop2">
+                        <a href='inventory?section=maps'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+                <li><a>Others <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="drop2">
+                        <a href='minecrud.php'>Add</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </header>
+
+    <div class="entry parallax-window" data-parallax="scroll" data-image-src="img/Home/2017-10-31_09.33.17.png" data-speed="0.5">
+        <div class="inner">
+            <h1><b>Welcome To</b></h1>
+            <img src="img/logo/Minecraft--Storage.png" alt="">
+            <h3>————— Storage of minecraft materials —————</h3><br>
+            <a class="btn btn-info" href="#">Sign Up</a>
+            <a class="btn btn-danger" href="#">Sign in</a>
+            <a class="btn btn-light" href="#">Add materials</a>
+        </div>
+        <a href="#download"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="download" id="download">
+        <img src="img/Home/Download-Minecraft.png" class="mt-5 mb-5">
+        <div class="packages_in">
+            <div class="package">
+                <a href="">
+                    <div class="text">
+                        <h2>Low</h2>
+                        <h4 class="text-secondary">Includes</h4>
+                        <p class=""><b class="text-danger">Version:</b> ForgeOptifine 1.12.2</p>
+                        <p><b class="text-danger">Mods:</b> DavinciVassels, Easybreeding, InventoryTweaks, Optifine, Treecapitator, LevelUp</p>
+                        <p><b class="text-danger">Textures:</b> Faithful 32X32</p>
+                        <p><b class="text-danger">Shaders:</b> Paolo's Lagless</p>
+                    </div>
+                    <img src="img/Packages/ZOrW.gif" class="revealator-slideleft revealator-duration8" alt="">
+                </a>
+            </div>
+            <div class="package">
+                <a href="">
+                    <div class="text">
+                        <h2>Medium</h2>
+                        <h4 class="text-secondary">Includes</h4>
+                        <p class=""><b class="text-danger">Version:</b> ForgeOptifine 1.12.2</p>
+                        <p><b class="text-danger">Mods: </b>BiomesOPlenty, DavinciVassels, Easybreeding,FancyBlockParticles, InventoryTweaks,JourneyMap, Optifine, Treecapitator, LevelUp,ancientwarfare</p>
+                        <p><b class="text-danger">Textures:</b> Dramatic Sky, Cyberghost, PureBdCraft, Faithful 32X32</p>
+                        <p><b class="text-danger">Shaders:</b> KUDA Shaders, Robobo1221, Seus Standart shaders, Paolo's Lagless</p>
+                    </div>
+                    <img src="img/Packages/giphy.gif" alt="">
+                </a>
+            </div>
+            <div class="package">
+                <a href="">
+                    <div class="text">
+                        <h2>Ultra</h2>
+                        <h4 class="text-secondary">Includes</h4>
+                        <p class=""><b class="text-danger">Version:</b> ForgeOptifine 1.12.2</p>
+                        <p><b class="text-danger">Mods: </b>BiomesOPlenty, DavinciVassels, Easybreeding,FancyBlockParticles, InventoryTweaks,JourneyMap, Optifine, Treecapitator, LevelUp,ancientwarfare</p>
+                        <p><b class="text-danger">Textures: </b>Jaker, Realistico, PulcharaPurePBR, 3D Craft, Dramatic Sky, Cyberghost, PureBdCraft, <p><b class="text-danger">Shaders:</b> KUDA Shaders, Robobo1221, Seus Standart shaders, Paolo's Lagless</p>
+                    </div>
+                    <img src="img/Packages/High-def-minecraft.gif" alt="">
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="wrapper2">
+            <main>
+                <div class="cards container" id="cards">
+                    <div class="row">
+
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="card">
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-08-21_20.36.22.png" alt="Card image cap"></a></div>
+                                <div class="card-body">
+                                    <label class="text-danger">Field</label>
+                                    <label class="text-warning ml-2">Grass</label>
+                                    <h3 class="mb-0">BattleField</h3>
+                                    <label class="text-secondary">[1.7.10] [1.8] [1.6.4] [1.12.2]</label>
+                                    <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card's content with an amazing pictures...</p>
+                                    <img src="img/skins/1.png" class="float-left mr-3 author_icon">
+                                    <div>
+                                        <a href=""><h6 class="m-0">Jaker</h6></a>
+                                        <label class="text-tiny text-secondary">April 29, 2017</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="card">
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-10-20_21.51.40.png" alt="Card image cap"></a></div>
+                                <div class="card-body">
+                                    <label class="text-danger">Field</label>
+                                    <label class="text-warning ml-2">Grass</label>
+                                    <h3 class="mb-0">Fall Forest</h3>
+                                    <label class="text-secondary">[1.7.10] [1.8] [1.6.4] [1.12.2]</label>
+                                    <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card's content with an amazing pictures...</p>
+                                    <img src="img/skins/3.png" class="float-left mr-3 author_icon">
+                                    <div>
+                                        <h6 class="m-0">Erik</h6>
+                                        <label class="text-tiny text-secondary">April 29, 2017</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="card">
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-08-25_15.49.33.png" alt="Card image cap"></a></div>
+                                <div class="card-body">
+                                    <label class="text-danger">Minecraft</label>
+                                    <label class="text-warning ml-2">Sky</label>
+                                    <label class="text-success ml-2">Torch</label>
+                                    <h3 class="mb-0">In the abandoned house</h3>
+                                    <label class="text-secondary">[1.7.10] [1.8] [1.6.4] [1.12.2]</label>
+                                    <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card's content with an amazing pictures...</p>
+                                    <img src="img/skins/5.png" class="float-left mr-3 author_icon">
+                                    <div>
+                                        <h6 class="m-0">John</h6>
+                                        <label class="text-tiny text-secondary">March 25, 2017</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="card">
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-10-21_11.40.08.png" alt="Card image cap"></a></div>
+                                <div class="card-body">
+                                    <label class="text-danger">GreenLand</label>
+                                    <label class="text-warning ml-2">Sky</label>
+                                    <label class="text-info ml-2">Leaves</label>
+                                    <h3 class="mb-0">Green Forest</h3>
+                                    <label class="text-secondary">[1.7.10] [1.8] [1.6.4] [1.12.2]</label>
+                                    <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card's content with an amazing pictures...</p>
+                                    <img src="img/skins/6.png" class="float-left mr-3 author_icon">
+                                    <div>
+                                        <h6 class="m-0">Tristan</h6>
+                                        <label class="text-tiny text-secondary">January 01, 2017</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            <aside class="">
+
+                <h5 class="text-secondary mb-3">Trending Posts</h5>
+
+                <a href="">
+                    <div class="card best border-0 mb-4">
+                        <img class="card-img" src="img/background.png" alt="Card image">
+                        <div class="card-img-overlay">
+                            <span class="align-bottom">
+                                <h6 class="card-title mb-2">Storage of Materials</h6>
+                                <p class="card-text text-grey text-tiny">March 30, 2017</p>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="card best border-0 mb-4">
+                        <img class="card-img" src="img/Temp/2017-07-25_10.30.20.png" alt="Card image">
+                        <div class="card-img-overlay">
+                            <span class="align-bottom">
+                                <h6 class="card-title mb-2">Storage of Materials</h6>
+                                <p class="card-text">March 30, 2017</p>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="card next mb-4">
+                        <div class="card-body">
+                            Mount and Blade BattleGear
+                            <p class="text-tiny m-0 text-secondary">June 12, 2018</p>
+                        </div>
+                        <img src="img/Temp/2017-07-25_10.11.35.png">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="card next mb-4">
+                        <div class="card-body">
+                            Sildur's Vibrant
+                            <p class="text-tiny m-0 text-secondary">June 12, 2018</p>
+                        </div>
+                        <img src="img/Temp/2017-08-26_16.54.13.png">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="card next mb-4">
+                        <div class="card-body">
+                            Ancient Warfare
+                            <p class="text-tiny m-0 text-secondary">June 12, 2018</p>
+                        </div>
+                        <img src="img/Temp/2017-10-20_22.23.30.png">
+                    </div>
+                </a>
+
+                <h5 class="text-secondary mb-3">Recent Tags</h5>
+                <div class="rec_tags">
+                    <a href="#">Minecraft</a>
+                    <a href="#">Field</a>
+                    <a href="#">Forest</a>
+                    <a href="#">Sky</a>
+                    <a href="#">Leaves</a>
+                    <a href="#">Sun</a>
+                    <a href="#">Snow</a>
+                    <a href="#">House</a>
+                </div>
+            </aside>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 col-sm-4 text-center pb-5 pb-sm-0">
+                    <div>
+                        <h4 class="mb-4 pb-3">Navigation</h4>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Mods</a></li>
+                        <li><a href="">Textures</a></li>
+                        <li><a href="">Maps</a></li>
+                        <li><a href="">Shaders</a></li>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 text-center pb-5 pb-sm-0">
+                    <div>
+                        <h4 class="mb-4 pb-3">Most Viewed</h4>
+                        <li><a href="">TreeCapitator</a></li>
+                        <li><a href="">Pirates Mod</a></li>
+                        <li><a href="">MoCreatures</a></li>
+                        <li><a href="">Architecture</a></li>
+                        <li><a href="">Seus Shaders</a></li>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 text-center pb-5 pb-sm-0">
+                    <h1>Minecraft <b class="text-warning">|</b> Storage</h1>
+                    <div class="text hal-light">
+                        Website where you can find wide range of minecraft materials such as mods, textures, maps, shaders, also you can download minecraft itself. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusantium repellat veniam sint soluta tempora et in provident ea beatae!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--
+        <div class="container">
+            <div class="row">
+                <nav class="col-6 col-lg-3">
+                    <h6 class="">Navigation</h6>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="mods">Mods</a></li>
+                    <li><a href="textures">Textures</a></li>
+                    <li><a href="shaders">Shaders</a></li>
+                    <li><a href="maps">Maps</a></li>
+                </nav>
+                <nav class="col-6 col-lg-3">
+                    <h6 class="">Recent Posts</h6>
+                    <li><a href="post?id=%s">Halo mod</a><br><label>June 10, 2018</label></li>
+                    <li><a href="post?id=%s">StepUp</a><br><label>June 10, 2018</label></li>
+                </nav>
+                <nav class="col-6 col-lg-3">
+                    <h6 class="">Events</h6>
+                    <li><a href="event?id=%s">CraftGuide</a><br><label>March 16, 2018</label></li>
+                </nav>
+                <nav class="col-6 col-lg-3">
+                    <h6><label class="text-warning">Minecraft</label>Storage</h6>
+                    <p>MinecraftStorage is the website which owes vide range of fresh and useful materials related to minecraft such as mods, textures, shaders, maps.</p>
+                </nav>
+            </div>
+        </div>
+        <div class="emblem">
+        <p class="float-left">© 2019 custompage.uz - for further information</p>
+        <div class="float-right"><label>Developed By </label> <b>{</b> <a href="https://custompage.uz">AppUnited</a> <b>}</b></div>
+        <div class="clear"></div>
+        </div>
+-->
+    </footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="additions/parallax.js/parallax.js"></script>
+<script src="additions/viewportchecker/src/jquery.viewportchecker.js"></script>
+<!--<script src="additions/waypoints/lib/noframework.waypoints.min.js"></script>-->
+<!--<script src="additions/revealator-master/fm.revealator.jquery.js"></script>-->
+
+
+<script src="js/blackblock.js"></script>
+<script src="https://unpkg.com/popper.js"></script>
+<script src="additions/bootstrap/js/bootstrap.min.js"></script>
+
+</html>
