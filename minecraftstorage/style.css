@@ -50,7 +50,7 @@ body {
 .entry {
     height: 100vh;
     width: 100%;
-/*    background-image: url(img/Home/2017-10-31_09.33.17.png);*/
+    background-image: url(img/Home/2017-10-31_09.33.17.png);
     color: white;
     position: relative;
     overflow: hidden;
@@ -364,7 +364,7 @@ main .card{
     max-width: 450px;
     overflow: hidden;
     margin-bottom: 40px;
-    opacity: 0;
+/*    opacity: 0;*/
 }
 
 main .card .card-body{
