@@ -89,74 +89,59 @@ body {
 }
 
 /*Download*/
-.homepage .download {
-    background-image: url(img/Temp/2017-10-26_10.33.39.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
+.download{
+    min-height: 1080px;
+    background-color: #f7f7f7;
     position: relative;
-    text-align: center;
-    border-top: 10px solid #00c2ff;
-    padding: 20px;
+    padding: 50px;
 }
-
-.download > img {
+.download .inner{
+    width: 1200px;
     max-width: 100%;
-}
-
-.packages_in {
-    width: 80%;
-    margin: auto;
-}
-
-.download .package {
     position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 40px;
-
+    left: 50%;
+    transform: translate(-50%);
 }
-
-.download .package img {
-    height: 350px;
+.download .package{
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+.download .package img{
+    width: 30%;
+    float: left;
     object-fit: cover;
-    transition: .3s;
-    width: 600px;
-    max-width: 100%;
-    float: right;
-}
-
-.download .package .text {
+    box-shadow: 0 0 100px rgba(0,0,0,0.5);
     position: absolute;
-    width: 600px;
-    max-width: 100%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
     height: 100%;
+    transition: .2s;
+}
+.download .package .text{
+    background-color: white;
+    width: 70%;
+    float: right;
     padding: 20px;
 }
+.download .package h2{
 
-
-
-.download .package:hover img {
-    width: 100%
 }
-
-.download .package:hover .text {
-    width: 100%;
+.download .package .text p{
+    margin-bottom: 8px;
+    color: #777;
+    letter-spacing: .4px;
 }
-
-.download .package h2 {
-    font-size: 50px;
-    font-weight: bold;
+.download .package .text p b{
+    color: black;
 }
-
-.download p {
-    color: #e2e2e2;
+.download .package .text a{
+    display: inline-block;
+    padding: 5px;
+    color: #00c2ff;
+    border: 1px solid;
+    transition: .2s;
 }
-
-
+.download .package .text a:hover{
+    color: yellowgreen;
+}
 /*HEADER*/
 header {
     border-bottom: 1px solid rgba(255, 255, 255, .3);
@@ -414,7 +399,9 @@ main .card .author_icon{
     height: 40px;
     border-radius: 50%;
 }
-
+main .card div a{
+    color: inherit;
+}
 
 
 /*ASIDE*/
@@ -789,45 +776,33 @@ footer .emblem p{
     }
 
     /*    Download*/
-    .packages_in {
+    .download{
+        padding: 40px 20px;
+    }
+    .download .mb-5>img{
         width: 100%;
     }
-    .download .package img {
-        height: 450px;
+    .download .package img{
+        position: relative;
+        float: none;
+        width: 100%;
+        box-shadow: none;
+        min-height: 400px;
     }
-
-    .download .package .text {
+    .download .package .text{
         position: absolute;
-        width: 600px;
-        max-width: 100%;
-        padding: 0 20px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.3);
-        transition: 0.3s;
-        height: 100%;
-        padding-bottom: 10px;
-    }
-
-    .download .package .text:hover {
-        background-color: rgba(0, 0, 0, 0);
-    }
-
-    .download .package:hover img {
-        width: 100%
-    }
-
-    .download .package:hover .text {
         width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        height: 100%;
     }
-
-    .download .package h2 {
-        padding-top: 20px;
-        font-size: 50px;
-        font-weight: bold;
+    .download .package .text p{
+        color: #f7f7f7;
     }
-
-    .download p {
-        color: #e2e2e2;
+    .download .package .text p b{
+        color: #00c2ff;
     }
 
     
