@@ -855,12 +855,12 @@ a:hover {
 
     from,
     to {
-        opacity: 0.3;
+        opacity: 0.1;
     }
-    20%{
-        opacity: 0.3;
+    80%{
+        opacity: 0.1;
     }
-    10% {
+    30% {
         opacity: 1;
     }
 }
@@ -887,25 +887,25 @@ a:hover {
     background-color: #3fd1ff;
     margin-bottom: 10px;
     float: left;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 .loading .spin:nth-child(1){
     margin-right: 10px;
-    animation: loading 4s infinite ease;
+    animation: loading 1s infinite ease;
     
 }
 .loading .spin:nth-child(2){
-    animation: loading 4s infinite;
-    animation-delay: 1s;
+    animation: loading 1s infinite;
+    animation-delay: 250ms;
 }
 .loading .spin:nth-child(3){
     margin-right: 10px;
-    animation: loading 4s infinite;
-    animation-delay: 3s;
+    animation: loading 1s infinite;
+    animation-delay: 750ms;
 }
 .loading .spin:nth-child(4){
-    animation: loading 4s infinite;
-    animation-delay: 2s;
+    animation: loading 1s infinite;
+    animation-delay: 500ms;
 }
 
 ::-webkit-input-placeholder {
