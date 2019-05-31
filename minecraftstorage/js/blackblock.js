@@ -1,4 +1,4 @@
-document.getElementsByTagName("body")[0].onload=function(){
+document.getElementById("tocheckimg").onload=function(){
     document.getElementsByTagName("body")[0].style.opacity = 1;
 };
 //Header
