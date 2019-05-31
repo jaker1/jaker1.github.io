@@ -1,6 +1,16 @@
-document.getElementById("tocheckimg").onload=function(){
-    $(".startup").fadeOut();
-};
+
+//document.getElementById("tocheckimg").onload=function(){
+//    $(".startup").fadeOut();
+//};
+
+$(document).ready(function() {
+    var tmpImg = new Image() ;
+    tmpImg.src = $('#tocheckimg').attr('src');
+    tmpImg.onload = function() {
+        $(".startup").fadeOut();
+    } ;
+}) ;
+
 //Header
 $("header nav li .fa").on("click",function(){
     
