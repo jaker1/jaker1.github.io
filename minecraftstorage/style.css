@@ -44,6 +44,7 @@ left: 50%;
 body {
 /*    background-color: #ebebeb;*/
     font-family: "Halvetica";
+    opacity: 0;
 }
 
 /*Homepage*/
