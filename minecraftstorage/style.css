@@ -32,7 +32,6 @@
 body {
 /*    background-color: #ebebeb;*/
     font-family: "Halvetica";
-    opacity: 0;
 }
 
 /*Homepage*/
@@ -867,11 +866,19 @@ a:hover {
 }
 /*Loading*/
 .loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+}
+.loading .inner{
     position: absolute;
     top: 50%;
     left: 50%;
     max-width: 100px;
-    z-index: 10;
     transform: translate(-50%,-50%);
 }
 .loading .spin{
@@ -880,7 +887,7 @@ a:hover {
     background-color: #3fd1ff;
     margin-bottom: 10px;
     float: left;
-    opacity: 0;
+    opacity: 0.3;
 }
 .loading .spin:nth-child(1){
     margin-right: 10px;
