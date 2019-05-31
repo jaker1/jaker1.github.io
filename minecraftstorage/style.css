@@ -1,16 +1,4 @@
 /*Animations*/
-
-/*
-@keyframes move {
-from, 
-to {
-bottom: 0;
-left: 50%;
-}
-50% {bottom: 15px;}
-}
-*/
-
 @keyframes move {
 
     from,
@@ -862,6 +850,56 @@ a:hover {
     font-family: "Halvetica Light";
 }
 
+
+
+@keyframes loading {
+
+    from,
+    to {
+        opacity: 0.3;
+    }
+    20%{
+        opacity: 0.3;
+    }
+    10% {
+        opacity: 1;
+    }
+}
+/*Loading*/
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100px;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+}
+.loading .spin{
+    width: 40px;
+    height: 40px;
+    background-color: #3fd1ff;
+    margin-bottom: 10px;
+    float: left;
+    opacity: 0;
+}
+.loading .spin:nth-child(1){
+    margin-right: 10px;
+    animation: loading 4s infinite ease;
+    
+}
+.loading .spin:nth-child(2){
+    animation: loading 4s infinite;
+    animation-delay: 1s;
+}
+.loading .spin:nth-child(3){
+    margin-right: 10px;
+    animation: loading 4s infinite;
+    animation-delay: 3s;
+}
+.loading .spin:nth-child(4){
+    animation: loading 4s infinite;
+    animation-delay: 2s;
+}
 
 ::-webkit-input-placeholder {
     font-style: italic;
