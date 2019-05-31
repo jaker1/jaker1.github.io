@@ -1,5 +1,4 @@
-document.getElementsByClassName("entry").onload = document.getElementsByTagName("body")[0].style.opacity = 1;
-
+"img/Home/2017-10-31_09.33.17.webp".onload = document.getElementsByTagName("body")[0].style.opacity = 1;
 
 //Header
 $("header nav li .fa").on("click",function(){
