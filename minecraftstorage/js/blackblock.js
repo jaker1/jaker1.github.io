@@ -1,7 +1,5 @@
+document.getElementsByClassName("entry").onload = document.getElementsByTagName("body")[0].style.opacity = 1;
 
-document.getElementsByClassName("entry")[0].onload=function(){
-    document.getElementsByTagName("body")[0].style.opacity = 1;
-};
 
 //Header
 $("header nav li .fa").on("click",function(){
