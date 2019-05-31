@@ -1,5 +1,5 @@
 
-document.getElementsByTagName("body")[0].onload=function(){
+document.getElementsByClassName("entry")[0].onload=function(){
     document.getElementsByTagName("body")[0].style.opacity = 1;
 };
 
