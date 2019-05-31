@@ -1,5 +1,6 @@
 document.getElementById("tocheckimg").onload=function(){
     document.getElementsByTagName("body")[0].style.opacity = 1;
+    $(".startup").fadeOut();
 };
 //Header
 $("header nav li .fa").on("click",function(){
