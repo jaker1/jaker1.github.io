@@ -146,6 +146,7 @@ header {
     background-color: rgba(255,255,255,.9);
     border: none;
     box-shadow: 0 0 50px -10px;
+    z-index: 2
 }
 .smallheader nav{
     color: black;
@@ -865,8 +866,14 @@ a:hover {
     }
 }
 /*Loading*/
-.loading{
+.cards .cardsloading{
+    z-index: 1
+}
+.startup{
     position: fixed;
+}
+.loading{
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;

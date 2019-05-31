@@ -15,7 +15,7 @@
 </head>
 
 <body class="homepage">
-   
+
     <header>
         <div class="m900">
             <nav>
@@ -106,19 +106,19 @@
     </header>
 
     <div class="entry parallax-window" data-parallax="scroll" data-image-src="img/Home/2017-10-31_09.33.17_17.webp">
-       
-<div class="startup loading">
-   <div class="inner">
-    <div class="spin"></div>
-    <div class="spin"></div>
-    <div class="spin"></div>
-    <div class="spin"></div>
-    <div class="clear"></div>
-    </div>
-</div>
-       
+
+        <div class="startup loading">
+            <div class="inner">
+                <div class="spin"></div>
+                <div class="spin"></div>
+                <div class="spin"></div>
+                <div class="spin"></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
         <div class="inner">
-           <img src="img/Home/2017-10-31_09.33.17_17.webp" id="tocheckimg" class="d-none">
+            <img src="img/Home/2017-10-31_09.33.17_17.webp" id="tocheckimg" class="d-none">
             <h1><b>Welcome To</b></h1>
             <img src="img/logo/Minecraft--Storage.webp" alt="">
             <h3>————— Storage of minecraft materials —————</h3><br>
@@ -177,11 +177,19 @@
         <div class="wrapper2">
             <main>
                 <div class="cards container" id="cards">
-                    <div class="row">
-
+                    <div class="row position-relative">
+                        <div class="loading cardsloading">
+                            <div class="inner">
+                                <div class="spin"></div>
+                                <div class="spin"></div>
+                                <div class="spin"></div>
+                                <div class="spin"></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card">
-                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-08-21_20.36.22.png" alt="Card image cap"></a></div>
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-08-21_20.36.22.png" alt="Card image cap" onload="imgloadedcount()"></a></div>
                                 <div class="card-body">
                                     <label class="text-danger">Field</label>
                                     <label class="text-warning ml-2">Grass</label>
@@ -200,7 +208,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card">
-                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-10-20_21.51.40.png" alt="Card image cap"></a></div>
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-10-20_21.51.40.png" alt="Card image cap" onload="imgloadedcount()"></a></div>
                                 <div class="card-body">
                                     <label class="text-danger">Field</label>
                                     <label class="text-warning ml-2">Grass</label>
@@ -217,7 +225,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card">
-                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-08-25_15.49.33.png" alt="Card image cap"></a></div>
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-08-25_15.49.33.png" alt="Card image cap" onload="imgloadedcount()"></a></div>
                                 <div class="card-body">
                                     <label class="text-danger">Minecraft</label>
                                     <label class="text-warning ml-2">Sky</label>
@@ -235,7 +243,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card">
-                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-10-21_11.40.08.png" alt="Card image cap"></a></div>
+                                <div class="imgdiv"><a href=""><img class="card-img-top" src="img/Temp/2017-10-21_11.40.08.png" alt="Card image cap" onload="imgloadedcount()"></a></div>
                                 <div class="card-body">
                                     <label class="text-danger">GreenLand</label>
                                     <label class="text-warning ml-2">Sky</label>
@@ -255,14 +263,14 @@
                     </div>
                 </div>
             </main>
-            
+
             <aside class="">
 
                 <h5 class="text-secondary mb-3">Trending Posts</h5>
 
                 <a href="">
                     <div class="card best border-0 mb-4">
-                        <img class="card-img" src="img/background.png" alt="Card image">
+                        <img class="card-img" src="" data-src="img/background.png" alt="Card image">
                         <div class="card-img-overlay">
                             <span class="align-bottom">
                                 <h6 class="card-title mb-2">Storage of Materials</h6>
@@ -273,7 +281,7 @@
                 </a>
                 <a href="">
                     <div class="card best border-0 mb-4">
-                        <img class="card-img" src="img/Temp/2017-07-25_10.30.20.png" alt="Card image">
+                        <img class="card-img" src="" data-src="img/Temp/2017-07-25_10.30.20.png" alt="Card image">
                         <div class="card-img-overlay">
                             <span class="align-bottom">
                                 <h6 class="card-title mb-2">Storage of Materials</h6>
@@ -289,7 +297,7 @@
                             Mount and Blade BattleGear
                             <p class="text-tiny m-0 text-secondary">June 12, 2018</p>
                         </div>
-                        <img src="img/Temp/2017-07-25_10.11.35.png">
+                        <img src="" data-src="img/Temp/2017-07-25_10.11.35.png">
                     </div>
                 </a>
                 <a href="">
@@ -323,7 +331,7 @@
                     <a href="#">House</a>
                 </div>
             </aside>
-            
+
             <div class="clear"></div>
         </div>
     </div>
