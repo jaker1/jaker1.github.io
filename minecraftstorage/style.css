@@ -346,7 +346,7 @@ main .cards{
 }
 
 /*Setting animation-duration for even cards to appear slower than odd ones*/
-.cards .row>div:nth-child(2n) .card{
+.cards .row>div:nth-child(2n+1) .card{
     animation-delay: 300ms;
 }
 
