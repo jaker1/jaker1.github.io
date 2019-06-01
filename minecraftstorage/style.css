@@ -63,6 +63,9 @@ body {
     animation: scale 1s infinite ease;
     max-width: 90%;
 }
+.entry .inner h1:nth-child(3){
+    color: #3fd1ff;
+}
 
 .entry .fa {
     position: absolute;
@@ -772,15 +775,16 @@ footer .emblem p{
         width: 100%;
     }
     .download .package img{
-        position: relative;
+        position: absolute;
         float: none;
         width: 100%;
         box-shadow: none;
-        min-height: 400px;
+        height: 100%;
     }
     .download .package .text{
-        position: absolute;
+        position: relative;
         width: 100%;
+        float: none;
         top: 0;
         left: 0;
         background-color: rgba(0,0,0,0.4);
@@ -848,6 +852,9 @@ a:hover {
 }
 .hal-light{
     font-family: "Halvetica Light";
+}
+.text-huge, .homepage .entry .text-huge{
+    font-size: 50px;
 }
 
 
@@ -920,6 +927,17 @@ div.startup{
     animation: loading 1s infinite;
     animation-delay: 500ms;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 ::-webkit-input-placeholder {
     font-style: italic;
