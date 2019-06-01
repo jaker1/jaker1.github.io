@@ -96,23 +96,32 @@ $("header .toggle>li>a").on('click', function () {
 //MAIN
 
 //Cards
-$('.wrapper .cards').imagesLoaded( function() {
-    
-  $(".cardsloading").fadeOut();
-    
-    
-        //Appearing effects
-        jQuery(document).ready(function () {
-            
-            jQuery('.cards .card').viewportChecker({
-                
-                classToAdd: 'visible animated fadeInUp',
-                offset: 100
-                
-            });
+
+$('.wrapper .cards').imagesLoaded(function () {
+
+    $(".cardsloading").fadeOut();
+
+    //Moving the src from data-src in aside
+    $("aside a img").attr('src', function () {
+        return $(this).attr("data-src");
+    });
+
+
+    //Appearing effects
+    jQuery(document).ready(function () {
+
+        jQuery('.cards .card').viewportChecker({
+
+            classToAdd: 'visible animated fadeInUp',
+            offset: 100
+
         });
-    
+    });
+
+
 });
+
+
 
 
 
