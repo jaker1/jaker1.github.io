@@ -866,9 +866,15 @@ a:hover {
     }
 }
 /*Loading*/
+
+/*For cards*/
 .cards .cardsloading{
-    z-index: 1
+    z-index: 1;
 }
+.cards .cardsloading .inner{
+    top: 20%;
+}
+/*For all pages*/
 div.startup{
     position: fixed;
     z-index: 10;

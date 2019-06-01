@@ -96,29 +96,24 @@ $("header .toggle>li>a").on('click', function () {
 //MAIN
 
 //Cards
-var imgloaded = 0;
-
-function imgloadedcount() {
-    imgloaded++;
-
-
-    if (imgloaded == 4) {
-        $("aside a img").attr('src', function () {
-            return $(this).attr("data-src");
-        });
-        $(".cardsloading").fadeOut();
-
-    }
-}
-
-
+$('.wrapper .cards').imagesLoaded( function() {
+    
+  $(".cardsloading").fadeOut();
+    
+    
         //Appearing effects
         jQuery(document).ready(function () {
+            
             jQuery('.cards .card').viewportChecker({
+                
                 classToAdd: 'visible animated fadeInUp',
                 offset: 100
+                
             });
         });
+    
+});
+
 
 
 
