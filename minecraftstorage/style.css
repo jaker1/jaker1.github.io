@@ -419,6 +419,7 @@ aside .next img{
     left: 0;
     object-fit: cover;
     opacity: 0;
+    width: 100%;
     transition: .2s;
 }
 aside .next:hover img{

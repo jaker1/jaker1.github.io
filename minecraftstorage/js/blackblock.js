@@ -101,12 +101,6 @@ $('.wrapper .cards').imagesLoaded(function () {
 
     $(".cardsloading").fadeOut();
 
-    //Moving the src from data-src in aside
-    $("aside a img").attr('src', function () {
-        return $(this).attr("data-src");
-    });
-    
-
     //Appearing effects
     jQuery(document).ready(function () {
 
@@ -117,16 +111,19 @@ $('.wrapper .cards').imagesLoaded(function () {
 
         });
     });
-    
-    
+
+
     //Changing small sized photos on cards to big ones
-//    $(".cards .card .imgdiv img")[1].src = $(".cards .card .imgdiv img")[1].src.replace("small","")
+    $(".cards .card .imgdiv img").each(function (index) {
+        $(".cards .card .imgdiv img")[index].src = $(".cards .card .imgdiv img")[index].src.replace("small", "");
+    });
 
-$( ".cards .card .imgdiv img").each(function(index) {
-  $( ".cards .card .imgdiv img")[index].src = $( ".cards .card .imgdiv img")[index].src.replace("small","");
-});
+
+    //Moving the src from data-src in aside
+    $("aside a img").attr('src', function () {
+        return $(this).attr("data-src");
+    });
     
-
 
 });
 
