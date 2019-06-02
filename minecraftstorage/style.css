@@ -44,11 +44,6 @@
 }
 
 
-
-
-
-/*End*/
-
 body {
     /*    background-color: #ebebeb;*/
     font-family: "Halvetica";
@@ -56,13 +51,20 @@ body {
 
 /*Homepage*/
 .entry {
-    height: 100vh;
     width: 100%;
-    /*    background-image: url(img/Home/2017-10-31_09.33.17_17.webp);*/
     color: white;
     position: relative;
     overflow: hidden;
-    background-attachment: fixed;
+    
+    min-height: 30vh;
+/*    background-image: url(img/background.png);*/
+    background-size: cover;
+    background-position: 50%;
+}
+
+.homepage .entry{
+    height: 100vh;
+    background-image: none;
 }
 
 .entry .inner {
@@ -164,15 +166,17 @@ body {
 
 /*HEADER*/
 header {
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
     transition: .2s;
 }
-
+.homepage header{
+    position: absolute;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
 /*Header after scrolling to part. height*/
 .smallheader {
     position: fixed;
@@ -190,21 +194,23 @@ header {
     background-color: rgb(0, 194, 255, 0.7);
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
+/*Smallheader end*/
+
 
 header .h900 {
     display: none;
 }
 
-header nav {
-    color: #ebebeb;
-}
 
+
+header nav {
+    
+}
 header nav li {
     list-style: none;
     float: left;
     margin-right: 20px;
 }
-
 header nav > li:not(.search) {
     position: relative;
 }
@@ -213,11 +219,27 @@ header nav li a:not(.no) {
     display: block;
     font-size: 20px;
     padding: 20px;
-    border-bottom: 1px solid transparent;
     position: relative;
     cursor: pointer;
+    color: #f7f7f7;
+}
+header nav li a:hover {
+    color: #c7c7c7 !important;
+}
+
+.homepage header nav{
     color: #ebebeb;
 }
+.homepage header nav li a{
+    border-bottom: 1px solid transparent;
+    color: #ebebeb;
+}
+.homepage header nav li a:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    color: white;
+}
+
+
 
 header nav li a img {
     min-height: 70px;
@@ -246,10 +268,6 @@ header nav li a:hover:after {
     color: white;
 }
 */
-header nav li a:hover {
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
-    color: white;
-}
 
 /*Search textarea*/
 header nav div {
@@ -784,14 +802,6 @@ footer a:hover {
     }
 
     /*Home*/
-    .entry .inner h3 {
-        font-size: 18px;
-    }
-
-    .entry .inner h1 {
-        font-size: 30px;
-    }
-
     .entry .inner img {
         margin: 10px 0;
     }
@@ -900,6 +910,7 @@ a:hover {
 
 .clear {
     clear: both;
+    float: none;
 }
 
 .hal-thin {

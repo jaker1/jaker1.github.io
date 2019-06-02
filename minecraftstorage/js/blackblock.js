@@ -10,6 +10,12 @@ $(document).ready(function () {
     };
 });
 
+//Loading bg-image only if it is not homepage to increase speed
+if(!$("body").hasClass("homepage")){
+    $(".entry").css('background-image','url(img/background.png)')
+}
+
+
 //Header
 $("header nav li .fa").on("click", function () {
 
