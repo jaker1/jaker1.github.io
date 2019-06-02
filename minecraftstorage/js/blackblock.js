@@ -94,9 +94,8 @@ $("header .toggle>li>a").on('click', function () {
 
 
 //MAIN
-
 //Cards
-
+if( $('.wrapper .cards').length ){
 $('.wrapper .cards').imagesLoaded(function () {
 
     $(".cardsloading").fadeOut();
@@ -126,6 +125,26 @@ $('.wrapper .cards').imagesLoaded(function () {
     
 
 });
+}
+
+
+//Log in
+$(".login .input input").on("keyup", function(){
+    if($(this).val().length>0){
+        if(!$(this).prev().hasClass('lb_move_up')){
+           $(this).prev().toggleClass("lb_move_up");
+        }
+    }
+    else{
+        if($(this).prev().hasClass('lb_move_up')){
+           $(this).prev().toggleClass("lb_move_up");
+        } 
+    }
+
+});
+
+
+
 
 
 
@@ -166,6 +185,10 @@ $('a').click(function () { // ловим клик по ссылке с клас�
 
 
 
+// Custom file input
+$(document).ready(function () {
+  bsCustomFileInput.init()
+})
 
 //For bootstrap tooltip
 $(function () {

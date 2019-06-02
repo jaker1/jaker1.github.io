@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Minecraft , майнкрафт , minecraftstorage ,mc ,mods, textures,shaders,maps,моды,шейдеры,текстуры,карты">
+    <meta name="description" content="Здесь Вы можете найти моды,текстуры для игры майнкрафт. Here you will find some materials related to minecraft">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MinecraftStorage - Login</title>
+    <link rel="shortcut icon" href="img/icon/iconb.png" type="image/png">
+    <link rel="stylesheet" href="additions/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href="additions/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="animate/animate.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="m900">
+            <nav>
+                <li><a href="/" class="no"><img src="img/icon/iconb.png"></a></li>
+                <li><a>Mods</a>
+                    <div class="dropdown">
+                        <a href="#">All</a>
+                        <a href="">1.7.10</a>
+                    </div>
+                </li>
+                <li><a>Textures</a>
+                    <div class="dropdown">
+                        <a href="">All</a>
+                        <a href="">1.7.10</a>
+                    </div>
+                </li>
+                <li><a>Shaders</a></li>
+                <li><a>Maps</a></li>
+                <li class="search"><i class="fa fa-search unfade" aria-hidden="true"></i></li>
+                <div>
+                    <form action="" method="post">
+                        <input type="text" placeholder="Type...">
+                    </form>
+                </div>
+            </nav>
+            <div class="lang unfade">
+
+                <img src="img/eng.png" title="Click to change language" data-toggle="tooltip" data-placement="left">
+                <a href=""><img src="img/rus.png" title="Change language to russian" class="second fader" data-toggle="tooltip" data-placement="left"></a>
+
+            </div>
+            <div class="roller"></div>
+        </div>
+        <!--Header for mobile-->
+        <div class="h900">
+            <img src="img/icon/iconb.png">
+
+            <div class="lang900">
+                <div class='lan'><label>Russian</label> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                <a href='' class='lanpass'>
+                    <div class='lan'><label>English</label></div>
+                </a>
+            </div>
+
+            <i class="fa fa-bars btn_toggle" aria-hidden="true"></i>
+
+            <form action=""><input type="text" placeholder="Type..."></form>
+
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+            <!--List (mods,textures...)-->
+            <div class="toggle">
+                <li><a href="/"><i class="fa fa-home"></i> Home </a></li>
+                <li><a><span class="glyphicon glyphicon-tower"></span> Mods</a>
+                    <div class="drop2">
+                        <a href='inventory?section=mods'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+
+                <li><a><span class="glyphicon glyphicon-tree-deciduous"></span> Textures</a>
+                    <div class="drop2">
+                        <a href='inventory?section=textures'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+
+                <li><a><span class="glyphicon glyphicon-grain"></span> Shaders</a>
+                    <div class="drop2">
+                        <a href='inventory?section=shaders'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+
+                <li><a><span class="glyphicon glyphicon-globe"></span> Maps</a>
+                    <div class="drop2">
+                        <a href='inventory?section=maps'>All</a>
+                        <a href='inventory?section=mods&version=$ver'>1.7.10</a>
+                    </div>
+                </li>
+                <li><a>Others <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="drop2">
+                        <a href='minecrud.php'>Add</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </header>
+
+    <div class="login">
+        <div class="inner align-middle">
+            <form action="" method="post">
+
+                <!--
+                <h1 class="text-center mb-4 hal-light">Log in</h1>
+
+                <div class="input">
+                    <label>Email</label>
+                    <input type="text" name="phone" autocomplete="off">
+                </div><br>
+
+                <div class="input">
+                    <label>Password</label>
+                    <input type="text" name="phone" autocomplete="off">
+                </div><br>
+                <button class="btn btn-dark" name="submit">Log in</button>
+-->
+
+
+                <h1 class="mb-5 hal-light">Create your account</h1>
+
+                <div class="input">
+                    <label>Email</label>
+                    <input type="text" name="email" autocomplete="off">
+                </div><br>
+
+                <div class="input">
+                    <label>Username</label>
+                    <input type="text" name="user" autocomplete="off">
+                </div><br>
+
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" name="photo">
+                    <label class="custom-file-label" for="customFile">Your photo</label>
+                </div><br><br><br>
+
+                <div class="input">
+                    <label>Password</label>
+                    <input type="text" name="pass" autocomplete="off">
+                </div><br>
+                <div class="input">
+                    <label>Confirm Password</label>
+                    <input type="text" name="cpass" autocomplete="off">
+                </div><br>
+                <button name="submit">Sign Up</button><br><br>
+                If you already have an account <a href="">sign in</a>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/blackblock.js"></script>
+<script src="https://unpkg.com/popper.js"></script>
+<script src="additions/bootstrap/js/bootstrap.min.js"></script>
+
+<!--Additionals-->
+<script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+
+
+</html>
