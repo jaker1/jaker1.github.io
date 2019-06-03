@@ -855,7 +855,7 @@ footer a:hover {
     /*Header*/
     header {
         background-color: black;
-        height: 50px;
+        height: 40px;
     }
 
     header .m900 {
@@ -863,7 +863,7 @@ footer a:hover {
     }
 
     header .h900 {
-        height: 50px;
+        height: 40px;
         display: block;
     }
 
@@ -879,14 +879,15 @@ footer a:hover {
     }
 
     .lang900 .lan {
-        padding: 10px;
+        padding: 6px;
         background-color: #363636;
-        height: 50px;
+        height: 40px;
         font-size: 16px;
         color: #696969;
         line-height: 1.8;
         transition: .2s;
         width: 100px;
+        text-align: center;
     }
 
     .lang900 .lan:hover {
@@ -907,7 +908,7 @@ footer a:hover {
 
     header > div > .fa {
         float: right;
-        font-size: 25px;
+        font-size: 18px;
         padding: 10px;
         height: 100%;
         background-color: #363636;
@@ -925,7 +926,7 @@ footer a:hover {
     }
 
     header input {
-        height: 50px;
+        height: 40px;
         background-color: #363636;
         border: none;
         width: 0px;
@@ -950,7 +951,7 @@ footer a:hover {
     header div.toggle {
         display: none;
         position: absolute;
-        top: 50px;
+        top: 40px;
         left: 0;
         background-color: #444;
         width: 100%;
