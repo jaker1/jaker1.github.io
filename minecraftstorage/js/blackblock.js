@@ -11,18 +11,18 @@ $(document).ready(function () {
 });
 
 //Loading bg-image only if it is not homepage to increase speed
-if(!$("body").hasClass("homepage")){
-    $(".entry").css('background-image','url(img/background.png)')
+if (!$("body").hasClass("homepage")) {
+    $(".entry").css('background-image', 'url(img/background.png)')
 }
 
 
 //Header
 $("header nav li .fa").on("click", function () {
 
-    if ($('header nav div input').is(':visible')) {
-        $("header nav div input").fadeOut(200);
+    if ($('header nav div form').is(':visible')) {
+        $("header nav div form").fadeOut(200);
     } else {
-        $("header nav div input").fadeIn(200);
+        $("header nav div form").fadeIn(200);
     }
 
 });
@@ -101,50 +101,83 @@ $("header .toggle>li>a").on('click', function () {
 
 //MAIN
 //Cards
-if( $('.wrapper .cards').length ){
-$('.wrapper .cards').imagesLoaded(function () {
+if ($('.wrapper .cards').length) {
+    $('.wrapper .cards').imagesLoaded(function () {
 
-    $(".cardsloading").fadeOut();
+        $(".cardsloading").fadeOut();
 
-    //Appearing effects
-    jQuery(document).ready(function () {
+        //Appearing effects
+        jQuery(document).ready(function () {
 
-        jQuery('.cards .card').viewportChecker({
+            jQuery('.cards .card').viewportChecker({
 
-            classToAdd: 'visible animated fadeInUp',
-            offset: 100
+                classToAdd: 'visible animated fadeInUp',
+                offset: 100
 
+            });
         });
+
+
+        //Changing small sized photos on cards to big ones
+        $(".cards .card .imgdiv img").each(function (index) {
+            $(".cards .card .imgdiv img")[index].src = $(".cards .card .imgdiv img")[index].src.replace("small", "");
+        });
+
+
+        //Moving the src from data-src in aside
+        $("aside a img").attr('src', function () {
+            return $(this).attr("data-src");
+        });
+
+
     });
-
-
-    //Changing small sized photos on cards to big ones
-    $(".cards .card .imgdiv img").each(function (index) {
-        $(".cards .card .imgdiv img")[index].src = $(".cards .card .imgdiv img")[index].src.replace("small", "");
-    });
-
-
+} else {
     //Moving the src from data-src in aside
     $("aside a img").attr('src', function () {
         return $(this).attr("data-src");
     });
-    
-
-});
 }
 
 
-//Log in
-$(".login .input input").on("keyup", function(){
-    if($(this).val().length>0){
-        if(!$(this).prev().hasClass('lb_move_up')){
-           $(this).prev().toggleClass("lb_move_up");
+
+
+//Blog
+
+//Changing small sized photos on cards to big ones in blog
+$(".blog>img")[0].src = $(".blog>img")[0].src.replace("small", "");
+
+
+// Screenshots
+$(".blog>.screens>img:not(.screen_active)").on('click', function () {
+    var screnatr = $(this).attr('src');
+    $(".icon_active").removeClass("icon_active");
+    $(this).toggleClass("icon_active");
+
+    $(".screen_active").animate({
+        opacity: '0'
+    }, {
+        duration: 300,
+        done: function () {
+            $(".screen_active").attr('src', screnatr).animate({
+                opacity: '1'
+            }, 300);
         }
-    }
-    else{
-        if($(this).prev().hasClass('lb_move_up')){
-           $(this).prev().toggleClass("lb_move_up");
-        } 
+    });
+
+    //On click end
+});
+
+
+//Log in
+$(".login .input input").on("keyup", function () {
+    if ($(this).val().length > 0) {
+        if (!$(this).prev().hasClass('lb_move_up')) {
+            $(this).prev().toggleClass("lb_move_up");
+        }
+    } else {
+        if ($(this).prev().hasClass('lb_move_up')) {
+            $(this).prev().toggleClass("lb_move_up");
+        }
     }
 
 });
@@ -193,7 +226,7 @@ $('a').click(function () { // ловим клик по ссылке с клас�
 
 // Custom file input
 $(document).ready(function () {
-  bsCustomFileInput.init()
+    bsCustomFileInput.init()
 })
 
 //For bootstrap tooltip

@@ -103,14 +103,14 @@ body {
 }
 
 /*Download*/
-.download {
+.homepage .download {
     min-height: 1080px;
     background-color: #f7f7f7;
     position: relative;
     padding: 50px;
 }
 
-.download .inner {
+.homepage .download .inner {
     width: 1200px;
     max-width: 100%;
     position: relative;
@@ -118,12 +118,12 @@ body {
     transform: translate(-50%);
 }
 
-.download .package {
+.homepage .download .package {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
-.download .package img {
+.homepage .download .package img {
     width: 30%;
     float: left;
     object-fit: cover;
@@ -133,26 +133,26 @@ body {
     transition: .2s;
 }
 
-.download .package .text {
+.homepage .download .package .text {
     background-color: white;
     width: 70%;
     float: right;
     padding: 20px;
 }
 
-.download .package h2 {}
+.homepage .download .package h2 {}
 
-.download .package .text p {
+.homepage .download .package .text p {
     margin-bottom: 8px;
     color: #777;
     letter-spacing: .4px;
 }
 
-.download .package .text p b {
+.homepage .download .package .text p b {
     color: black;
 }
 
-.download .package .text a {
+.homepage .download .package .text a {
     display: inline-block;
     padding: 5px;
     color: #00c2ff;
@@ -160,7 +160,7 @@ body {
     transition: .2s;
 }
 
-.download .package .text a:hover {
+.homepage .download .package .text a:hover {
     color: yellowgreen;
 }
 
@@ -173,12 +173,12 @@ header {
     z-index: 1;
     transition: .2s;
 }
-.homepage header{
+header.scrollheader{
     position: absolute;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 /*Header after scrolling to part. height*/
-.smallheader {
+header.smallheader {
     position: fixed;
     background-color: rgba(255, 255, 255, .9);
     border: none;
@@ -186,26 +186,26 @@ header {
     z-index: 2
 }
 
-.smallheader nav {
+header.smallheader nav {
     color: black;
 }
 
-.smallheader .dropdown {
+header.smallheader .dropdown {
     background-color: rgb(0, 194, 255, 0.7);
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
+header.smallheader.scrollheader nav>li>a:hover{
+    color: #555 !important;
+}
 /*Smallheader end*/
 
-
+/*Hiding header for mobile*/
 header .h900 {
     display: none;
 }
 
 
 
-header nav {
-    
-}
 header nav li {
     list-style: none;
     float: left;
@@ -214,6 +214,9 @@ header nav li {
 header nav > li:not(.search) {
     position: relative;
 }
+header .fa{
+    cursor: pointer;
+}
 
 header nav li a:not(.no) {
     display: block;
@@ -221,24 +224,22 @@ header nav li a:not(.no) {
     padding: 20px;
     position: relative;
     cursor: pointer;
-    color: #f7f7f7;
 }
 header nav li a:hover {
     color: #c7c7c7 !important;
 }
 
-.homepage header nav{
+.scrollheader nav{
     color: #ebebeb;
 }
-.homepage header nav li a{
+header.scrollheader nav li a{
     border-bottom: 1px solid transparent;
     color: #ebebeb;
 }
-.homepage header nav li a:hover {
+header.scrollheader nav li a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, .5);
-    color: white;
+    color: white !important;
 }
-
 
 
 header nav li a img {
@@ -270,23 +271,48 @@ header nav li a:hover:after {
 */
 
 /*Search textarea*/
+header nav li>.fa-search {
+    padding: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: .2s;
+}
+
+header nav li>.fa-search:hover {
+    transform: translate(0, -50%) rotate(90deg);
+    font-size: 1.5em;
+}
+
 header nav div {
     float: left;
     position: relative;
 }
-
-header nav input {
+header nav div form{
+    min-width: 300px;
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 15px;
-    margin-top: 20px;
+    display: none;
+}
+header nav div form .fa-search{
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgba(255,255,255,.3);
+    color: white;
+    float: left;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+header nav input {
+    float: left;
     border: 2px solid rgba(255, 255, 255, .5);
     background-color: rgba(255, 255, 255, .3);
     padding: 5px;
     border-radius: 4px;
     transition: .2s;
     color: #555;
-    display: none;
     min-width: 250px
 }
 
@@ -301,20 +327,7 @@ header nav input:focus {
     transform: scale(1.05);
 }
 
-header nav li .fa-search {
-    padding: 20px;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    transition: .2s;
-}
 
-header nav li .fa-search:hover {
-    transform: translate(0, -50%) rotate(90deg);
-    font-size: 1.5em;
-    color: white;
-}
 
 header .lang {
     position: absolute;
@@ -393,20 +406,20 @@ header nav li .dropdown a:hover {
 main {
     float: left;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
+}
+main>.major {
+    max-width: 1050px;
 }
 
 /*Cards*/
-main .cards {
-    max-width: 1050px;
-}
 
 /*Setting animation-duration for even cards to appear slower than odd ones*/
 .cards .row > div:nth-child(2n+1) .card {
     animation-delay: 300ms;
 }
 
-main .card {
+main .cards .card {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     border: none;
     max-width: 450px;
@@ -415,17 +428,17 @@ main .card {
     opacity: 0;
 }
 
-main .card .card-body {
+main .cards .card .card-body {
     padding: 30px;
 }
 
-main .card h3 {
+main .cards .card h3 {
     font-size: 35px;
     letter-spacing: 1px;
     color: #555;
 }
 
-main .card p {
+main .cards .card p {
     line-height: 2;
     font-family: "Halvetica Light";
 }
@@ -434,23 +447,201 @@ main .card p {
     overflow: hidden;
 }
 
-main .card img {
+main .cards .card img {
     transition: .2s;
 }
 
-main .card:hover img {
+main .cards .card:hover img {
     transform: scale(1.04);
 }
 
-main .card .author_icon {
+main .cards .card .author_icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-main .card div a {
+main .cards .card div a {
     color: inherit;
 }
+/*Blog*/
+.blog_body .smallheader{
+    display: none
+}
+.blog h1,.blog h2,.blog h3,.blog h4{
+    letter-spacing: 2px;
+    color: #4f4f4f;
+}
+.blog .details{
+    font-size: 15px
+}
+.blog .details i{
+    font-size: 20px;
+}
+.blog .details .tags a{
+    display: inline-block;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    background-color: #00c2ff;
+    color: white;
+    margin-right: 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    transition: .2s;
+    margin-bottom: 10px;
+}
+.blog .details .tags a:hover{
+    background-color: #363636;
+}
+.blog>img{
+    width: 100%;
+}
+.blog p{
+    color: #777;
+    font-size: 18px;
+    font-family: "Rubik";
+    line-height: 2;
+}
+.blog .install p{
+    margin-bottom: 0;
+}
+
+.blog .download{
+    color: #00c2ff
+}
+.blog .download .down{
+    
+    padding: 10px;
+    padding-left: 0;
+}
+.blog .download .down p{
+    float: left;
+    margin: 0;
+}
+.blog .download .down a{
+    float: right;
+    line-height: 2.3;
+}
+/*Screenshots*/
+.blog>.screens{
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.blog>.screens .screen_active{
+    border-top: 5px solid #00c2ff;
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.blog>.screens img{
+    width: 16%;
+    float: left;
+    margin: 1%;
+    opacity: .5;
+    cursor: pointer;
+}
+.blog>.screens .screen_active,.blog>.screens .icon_active{
+    opacity: 1;
+    cursor: default;
+}
+.blog .screens img:nth-child(2){
+    margin-left: 0;
+}
+/*Comment*/
+.blog .comment{
+    margin-bottom: 100px;
+}
+.blog .comment input{
+    max-width: 600px;
+    border: none;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    transition: .2s;
+    color: #777;
+    margin-bottom: 20px;
+}
+.blog .comment input:focus{
+    transform: scale(1.03);
+}
+.blog .comment textarea{
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    transition: .2s;
+    color: #777;
+    display: block;
+    min-height: 200px;
+}
+.blog .comment textarea:focus{
+    transform: scale(1.03);
+}
+.blog .comment button{
+    border: 0;
+    background-color: #00c2ff;
+    color: white;
+    padding: 10px;
+    min-width: 200px;
+    border-radius: 20px;
+    transition: .2s;
+}
+.blog .comment button:hover{
+    background-color: #00b6f0;
+}
+.blog .comment button:active{
+    transform: scale(1.03)
+}
+/*Comments*/
+.blog .comments .response{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.blog .comments .card{
+    width: 85%;
+    float: left;
+    box-shadow: 0 0 50px rgba(0,0,0,.1);
+    position: relative;
+    border: none;
+    margin-bottom: 20px;
+}
+.blog .comments .card:after{
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: 0;
+    border: 20px solid transparent;
+    border-right: 20px solid white;
+    border-top: 20px solid white;
+}
+.blog .comments img{
+    max-width: 50px;
+    max-height: 50px;
+    width: 10%;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+.blog .comments .date{
+    font-size: 14px;
+    color: #969696;
+    
+}
+
+
+
 
 
 /*ASIDE*/
@@ -807,15 +998,15 @@ footer a:hover {
     }
 
     /*    Download*/
-    .download {
+    .homepage .download {
         padding: 40px 20px;
     }
 
-    .download .mb-5 > img {
+    .homepage .download .mb-5 > img {
         width: 100%;
     }
 
-    .download .package img {
+    .homepage .download .package img {
         position: absolute;
         float: none;
         width: 100%;
@@ -823,7 +1014,7 @@ footer a:hover {
         height: 100%;
     }
 
-    .download .package .text {
+    .homepage .download .package .text {
         position: relative;
         width: 100%;
         float: none;
@@ -834,11 +1025,11 @@ footer a:hover {
         height: 100%;
     }
 
-    .download .package .text p {
+    .homepage .download .package .text p {
         color: #f7f7f7;
     }
 
-    .download .package .text p b {
+    .homepage .download .package .text p b {
         color: #00c2ff;
     }
 
@@ -887,10 +1078,22 @@ footer a:hover {
     font-style: normal;
     font-weight: normal;
 }
+@font-face {
+    font-family: "Halvetica Bold";
+    src: url("fonts/Halvetica/HelveticaNeueCyr-Bold.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
 @font-face {
     font-family: "Halvetica Light";
     src: url("fonts/Halvetica/HelveticaNeueCyr-Light.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik/Rubik.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -914,17 +1117,25 @@ a:hover {
 }
 
 .hal-thin {
-    font-family: "Halvetica Thin";
+    font-family: "Halvetica Thin" !important;
+}
+.hal-bold {
+    font-family: "Halvetica Bold" !important;
 }
 
 .hal-light {
-    font-family: "Halvetica Light";
+    font-family: "Halvetica Light" !important;
 }
-
+.rubik{
+    font-family: "Rubik";
+}
 .text-huge,
 .homepage .entry .text-huge {
-    font-size: 40px;
+    font-size: 45px;
 }
+
+
+
 
 
 
