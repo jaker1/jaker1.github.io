@@ -55,14 +55,15 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
-    
-    min-height: 30vh;
-/*    background-image: url(img/background.png);*/
+
+    min-height: 250px;
+    height: 30vh;
+    /*    background-image: url(img/background.png);*/
     background-size: cover;
     background-position: 50%;
 }
 
-.homepage .entry{
+.homepage .entry {
     height: 100vh;
     background-image: none;
 }
@@ -173,10 +174,12 @@ header {
     z-index: 1;
     transition: .2s;
 }
-header.scrollheader{
+
+header.scrollheader {
     position: absolute;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
+
 /*Header after scrolling to part. height*/
 header.smallheader {
     position: fixed;
@@ -194,9 +197,11 @@ header.smallheader .dropdown {
     background-color: rgb(0, 194, 255, 0.7);
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
-header.smallheader.scrollheader nav>li>a:hover{
+
+header.smallheader.scrollheader nav > li > a:hover {
     color: #555 !important;
 }
+
 /*Smallheader end*/
 
 /*Hiding header for mobile*/
@@ -211,10 +216,12 @@ header nav li {
     float: left;
     margin-right: 20px;
 }
+
 header nav > li:not(.search) {
     position: relative;
 }
-header .fa{
+
+header .fa {
     cursor: pointer;
 }
 
@@ -225,17 +232,20 @@ header nav li a:not(.no) {
     position: relative;
     cursor: pointer;
 }
+
 header nav li a:hover {
     color: #c7c7c7 !important;
 }
 
-.scrollheader nav{
+.scrollheader nav {
     color: #ebebeb;
 }
-header.scrollheader nav li a{
+
+header.scrollheader nav li a {
     border-bottom: 1px solid transparent;
     color: #ebebeb;
 }
+
 header.scrollheader nav li a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, .5);
     color: white !important;
@@ -271,7 +281,7 @@ header nav li a:hover:after {
 */
 
 /*Search textarea*/
-header nav li>.fa-search {
+header nav li > .fa-search {
     padding: 20px;
     font-size: 20px;
     position: absolute;
@@ -280,7 +290,7 @@ header nav li>.fa-search {
     transition: .2s;
 }
 
-header nav li>.fa-search:hover {
+header nav li > .fa-search:hover {
     transform: translate(0, -50%) rotate(90deg);
     font-size: 1.5em;
 }
@@ -289,22 +299,25 @@ header nav div {
     float: left;
     position: relative;
 }
-header nav div form{
+
+header nav div form {
     min-width: 300px;
     position: absolute;
     top: 90px;
     left: 15px;
     display: none;
 }
-header nav div form .fa-search{
+
+header nav div form .fa-search {
     font-size: 18px;
     padding: 10px;
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .3);
     color: white;
     float: left;
     border-radius: 5px;
     margin-left: 10px;
 }
+
 header nav input {
     float: left;
     border: 2px solid rgba(255, 255, 255, .5);
@@ -408,7 +421,8 @@ main {
     padding-top: 80px;
     padding-bottom: 100px;
 }
-main>.major {
+
+main > .major {
     max-width: 1050px;
 }
 
@@ -464,21 +478,29 @@ main .cards .card .author_icon {
 main .cards .card div a {
     color: inherit;
 }
+
 /*Blog*/
-.blog_body .smallheader{
+.blog_body .smallheader {
     display: none
 }
-.blog h1,.blog h2,.blog h3,.blog h4{
+
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4 {
     letter-spacing: 2px;
     color: #4f4f4f;
 }
-.blog .details{
+
+.blog .details {
     font-size: 15px
 }
-.blog .details i{
+
+.blog .details i {
     font-size: 20px;
 }
-.blog .details .tags a{
+
+.blog .details .tags a {
     display: inline-block;
     padding: 5px;
     padding-left: 10px;
@@ -492,70 +514,86 @@ main .cards .card div a {
     transition: .2s;
     margin-bottom: 10px;
 }
-.blog .details .tags a:hover{
+
+.blog .details .tags a:hover {
     background-color: #363636;
 }
-.blog>img{
+
+.blog > img {
     width: 100%;
 }
-.blog p{
+
+.blog p {
     color: #777;
     font-size: 18px;
     font-family: "Rubik";
     line-height: 2;
 }
-.blog .install p{
+
+.blog .install p {
     margin-bottom: 0;
 }
 
-.blog .download{
+.blog .download {
     color: #00c2ff
 }
-.blog .download .down{
-    
+
+.blog .download .down {
+
     padding: 10px;
     padding-left: 0;
 }
-.blog .download .down p{
+
+.blog .download .down p {
     float: left;
     margin: 0;
 }
-.blog .download .down a{
+
+.blog .download .down a {
     float: right;
     line-height: 2.3;
 }
+
 /*Screenshots*/
-.blog>.screens{
+.blog > .screens {
     max-width: 100%;
     margin: auto;
     margin-bottom: 40px;
 }
-.blog>.screens .screen_active{
+
+.blog > .screens .screen_active {
     border-top: 5px solid #00c2ff;
     width: 100%;
     float: left;
     padding: 0;
     margin: 0;
 }
-.blog>.screens img{
+
+.blog > .screens img {
     width: 16%;
+    min-width: 80px;
     float: left;
-    margin: 1%;
+    margin: 2%;
     opacity: .5;
     cursor: pointer;
 }
-.blog>.screens .screen_active,.blog>.screens .icon_active{
+
+.blog > .screens .screen_active,
+.blog > .screens .icon_active {
     opacity: 1;
     cursor: default;
 }
-.blog .screens img:nth-child(2){
+
+.blog .screens img:nth-child(2) {
     margin-left: 0;
 }
+
 /*Comment*/
-.blog .comment{
+.blog .comment {
     margin-bottom: 100px;
 }
-.blog .comment input{
+
+.blog .comment input {
     max-width: 600px;
     border: none;
     background-color: #f7f7f7;
@@ -567,10 +605,12 @@ main .cards .card div a {
     color: #777;
     margin-bottom: 20px;
 }
-.blog .comment input:focus{
+
+.blog .comment input:focus {
     transform: scale(1.03);
 }
-.blog .comment textarea{
+
+.blog .comment textarea {
     width: 100%;
     max-width: 600px;
     border: none;
@@ -584,10 +624,12 @@ main .cards .card div a {
     display: block;
     min-height: 200px;
 }
-.blog .comment textarea:focus{
+
+.blog .comment textarea:focus {
     transform: scale(1.03);
 }
-.blog .comment button{
+
+.blog .comment button {
     border: 0;
     background-color: #00c2ff;
     color: white;
@@ -596,26 +638,31 @@ main .cards .card div a {
     border-radius: 20px;
     transition: .2s;
 }
-.blog .comment button:hover{
+
+.blog .comment button:hover {
     background-color: #00b6f0;
 }
-.blog .comment button:active{
+
+.blog .comment button:active {
     transform: scale(1.03)
 }
+
 /*Comments*/
-.blog .comments .response{
+.blog .comments .response {
     width: 100%;
     margin-bottom: 30px;
 }
-.blog .comments .card{
+
+.blog .comments .card {
     width: 85%;
     float: left;
-    box-shadow: 0 0 50px rgba(0,0,0,.1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, .1);
     position: relative;
     border: none;
     margin-bottom: 20px;
 }
-.blog .comments .card:after{
+
+.blog .comments .card:after {
     content: " ";
     position: absolute;
     width: 0;
@@ -626,7 +673,8 @@ main .cards .card div a {
     border-right: 20px solid white;
     border-top: 20px solid white;
 }
-.blog .comments img{
+
+.blog .comments img {
     max-width: 50px;
     max-height: 50px;
     width: 10%;
@@ -634,10 +682,11 @@ main .cards .card div a {
     float: left;
     margin-right: 20px;
 }
-.blog .comments .date{
+
+.blog .comments .date {
     font-size: 14px;
     color: #969696;
-    
+
 }
 
 
@@ -834,7 +883,8 @@ footer a:hover {
 .login .inner button:active {
     background-color: #00c2ff
 }
-.login .custom-file{
+
+.login .custom-file {
     overflow: hidden;
 }
 
@@ -1035,6 +1085,12 @@ footer a:hover {
         color: #00c2ff;
     }
 
+    /*    Main*/
+    main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     /*LOGIN*/
     .login {
         position: relative;
@@ -1055,6 +1111,26 @@ footer a:hover {
     /*    FOOTER*/
     footer {
         background-image: none;
+    }
+
+
+
+
+    /*    General*/
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    label {
+        font-size: 12px;
     }
 
 }
@@ -1080,6 +1156,7 @@ footer a:hover {
     font-style: normal;
     font-weight: normal;
 }
+
 @font-face {
     font-family: "Halvetica Bold";
     src: url("fonts/Halvetica/HelveticaNeueCyr-Bold.otf") format("truetype");
@@ -1093,6 +1170,7 @@ footer a:hover {
     font-style: normal;
     font-weight: normal;
 }
+
 @font-face {
     font-family: "Rubik";
     src: url("fonts/Rubik/Rubik.ttf") format("truetype");
@@ -1121,6 +1199,7 @@ a:hover {
 .hal-thin {
     font-family: "Halvetica Thin" !important;
 }
+
 .hal-bold {
     font-family: "Halvetica Bold" !important;
 }
@@ -1128,16 +1207,15 @@ a:hover {
 .hal-light {
     font-family: "Halvetica Light" !important;
 }
-.rubik{
+
+.rubik {
     font-family: "Rubik";
 }
+
 .text-huge,
 .homepage .entry .text-huge {
     font-size: 45px;
 }
-
-
-
 
 
 
