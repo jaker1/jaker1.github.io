@@ -553,13 +553,14 @@ main .cards .card div a {
 }
 .blog .download .down p {
     float: left;
+    height: 100%;
     margin: 0;
 }
 
 .blog .download .down a {
     float: right;
-    line-height: 2.3;
     color: #3fd1ff;
+    display: block;
 }
 .blog .download .down a:hover{
     color: #00b6f0;
@@ -1101,7 +1102,7 @@ footer a:hover {
         color: #00c2ff;
     }
 
-    /*    Main*/
+    /*Main*/
     main {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -1121,8 +1122,14 @@ footer a:hover {
         margin-top: 50px;
     }
 
+/*BLOG*/
+.blog .details {
+    font-size: 10px
+}
 
-
+.blog .details i {
+    font-size: 16px;
+}
 
     /*    FOOTER*/
     footer {
@@ -1224,7 +1231,6 @@ a:hover {
 .text-tiny {
     font-size: 12px;
 }
-
 .text-grey {
     color: #777;
 }
