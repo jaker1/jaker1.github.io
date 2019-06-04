@@ -492,6 +492,7 @@ main .cards .card div a {
 .blog h4 {
     letter-spacing: 2px;
     color: #4f4f4f;
+    font-family: "Halvetica Bold"
 }
 
 .blog .details {
@@ -525,19 +526,21 @@ main .cards .card div a {
     width: 100%;
 }
 
-.blog p {
-    color: #777;
-    font-size: 18px;
+.blog p.description {
+    font-size: 16px;
+    line-height: 32px;
     font-family: "Rubik";
-    line-height: 2;
+    color: rgb(51, 51, 51);
+    letter-spacing: .01em;
 }
 
 .blog .install p {
-    margin-bottom: 0;
+    
 }
 
 .blog .download {
-    color: #00c2ff
+    background-color: #f7f7f7;
+    padding: 20px;
 }
 
 .blog .download .down {
@@ -546,6 +549,10 @@ main .cards .card div a {
     padding-left: 0;
 }
 
+.blog .download h3 {
+    
+    
+}
 .blog .download .down p {
     float: left;
     margin: 0;
