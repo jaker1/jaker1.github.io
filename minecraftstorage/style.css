@@ -574,13 +574,13 @@ main .cards .card div a {
     min-width: 80px;
     float: left;
     margin: 2%;
-    opacity: .5;
     cursor: pointer;
 }
-
-.blog > .screens .screen_active,
+.blog > .screens .screen_active{
+    cursor: default;
+}
 .blog > .screens .icon_active {
-    opacity: 1;
+    opacity: .5;
     cursor: default;
 }
 
@@ -637,6 +637,7 @@ main .cards .card div a {
     min-width: 200px;
     border-radius: 20px;
     transition: .2s;
+    outline: none;
 }
 
 .blog .comment button:hover {
@@ -648,13 +649,16 @@ main .cards .card div a {
 }
 
 /*Comments*/
+.blog .comments{
+    margin-bottom: 100px;
+}
 .blog .comments .response {
     width: 100%;
     margin-bottom: 30px;
 }
 
 .blog .comments .card {
-    width: 85%;
+    width: 80%;
     float: left;
     box-shadow: 0 0 50px rgba(0, 0, 0, .1);
     position: relative;
@@ -1114,24 +1118,6 @@ footer a:hover {
     }
 
 
-
-
-    /*    General*/
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 27px;
-    }
-
-    h3 {
-        font-size: 25px;
-    }
-
-    label {
-        font-size: 12px;
-    }
 
 }
 
