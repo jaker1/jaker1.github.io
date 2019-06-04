@@ -539,8 +539,7 @@ main .cards .card div a {
 }
 
 .blog .download {
-    background-color: #f7f7f7;
-    padding: 20px;
+    
 }
 
 .blog .download .down {
@@ -550,8 +549,7 @@ main .cards .card div a {
 }
 
 .blog .download h3 {
-    
-    
+
 }
 .blog .download .down p {
     float: left;
@@ -561,8 +559,11 @@ main .cards .card div a {
 .blog .download .down a {
     float: right;
     line-height: 2.3;
+    color: #3fd1ff;
 }
-
+.blog .download .down a:hover{
+    color: #00b6f0;
+}
 /*Screenshots*/
 .blog > .screens {
     max-width: 100%;
@@ -697,8 +698,10 @@ main .cards .card div a {
 }
 
 .blog .comments .date {
-    font-size: 14px;
+    font-size: 13px;
     color: #969696;
+    font-family: "Halvetica Light";
+    letter-spacing: 1px;
 
 }
 
@@ -1127,10 +1130,50 @@ footer a:hover {
     }
 
 
+    
+/*    GENERAL*/
+    h1{
+        font-size: 30px
+    }
+    h2{
+        font-size: 26px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+    label{
+        font-size: 14px;
+    }
+    .btn{
+        padding: 5px;
+        font-size: 14px;
+    }
+    
+    
+    
+    
+    
+    
 
 }
 
 /*max-width: 900 END*/
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1380px) {
     aside {
         display: none;
@@ -1183,7 +1226,7 @@ a:hover {
 }
 
 .text-grey {
-    color: #c7c7c7;
+    color: #777;
 }
 
 .clear {
@@ -1211,7 +1254,9 @@ a:hover {
 .homepage .entry .text-huge {
     font-size: 45px;
 }
-
+.ls1{
+    letter-spacing: 1px
+}
 
 
 @keyframes loading {
