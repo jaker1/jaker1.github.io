@@ -142,7 +142,7 @@ if ($('.wrapper .cards').length) {
 
 
 //Blog
-
+if ($('.blog').length) {
 //Changing small sized photos on cards to big ones in blog
 $(".blog>img")[0].src = $(".blog>img")[0].src.replace("small", "");
 
@@ -167,6 +167,8 @@ $(".blog>.screens>img:not(.screen_active)").on('click', function () {
     //On click end
 });
 
+}
+    
 
 //Log in
 $(".login .input input").on("keyup", function () {

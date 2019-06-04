@@ -174,12 +174,17 @@ header {
     z-index: 1;
     transition: .2s;
 }
+header.smallheader{
+    display: none;
+}
 
 header.scrollheader {
     position: absolute;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
-
+header.scrollheader.smallheader{
+    display: block
+}
 /*Header after scrolling to part. height*/
 header.smallheader {
     position: fixed;
@@ -480,9 +485,6 @@ main .cards .card div a {
 }
 
 /*Blog*/
-.blog_body .smallheader {
-    display: none
-}
 
 .blog h1,
 .blog h2,
