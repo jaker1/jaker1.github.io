@@ -141,7 +141,7 @@ if ($('.wrapper .cards').length) {
 
 
 
-//Blog
+//BLOG
 if ($('.blog').length) {
 //Changing small sized photos on cards to big ones in blog
 $(".blog>img")[0].src = $(".blog>img")[0].src.replace("small", "");
@@ -187,6 +187,48 @@ $(".login .input input").on("keyup", function () {
 
 
 
+//ADDING PAGE
+$(".crud .files>i").on('click', function () {
+    $(this).prev().toggleClass("linkinp2");
+    if($(this).prev().val().length){
+       $(this).toggleClass("ln_wr")
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -223,6 +265,37 @@ $('a').click(function () { // ловим клик по ссылке с клас�
     return false; // выключаем стандартное действие
 });
 
+
+
+
+
+// Working with tips
+$(".popup i").on('click',function() {
+  $(".popup").fadeOut(100);
+});
+
+$(".hint").on('click',function() {
+  var hint_src = $(this).attr("data-src");
+  $(".popin").html("<img src='"+ hint_src +"' style='width:100%;'>");
+  $(".popup").fadeIn(100);
+});
+
+
+$(".videolauncher").on('click',function() {
+  $(".popup").fadeIn(100);
+});
+
+
+//Click on everything exept specific block
+$(document).click(function (e) {
+
+    // Check if click was triggered on or within
+    if ($(e.target).closest(".popup img, .hint").length > 0) {
+        return false;
+    }
+    $(".popup").fadeOut();
+
+});
 
 
 

@@ -174,7 +174,8 @@ header {
     z-index: 1;
     transition: .2s;
 }
-header.smallheader{
+
+header.smallheader {
     display: none;
 }
 
@@ -182,9 +183,11 @@ header.scrollheader {
     position: absolute;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
-header.scrollheader.smallheader{
+
+header.scrollheader.smallheader {
     display: block
 }
+
 /*Header after scrolling to part. height*/
 header.smallheader {
     position: fixed;
@@ -534,13 +537,9 @@ main .cards .card div a {
     letter-spacing: .01em;
 }
 
-.blog .install p {
-    
-}
+.blog .install p {}
 
-.blog .download {
-    
-}
+.blog .download {}
 
 .blog .download .down {
 
@@ -548,9 +547,8 @@ main .cards .card div a {
     padding-left: 0;
 }
 
-.blog .download h3 {
+.blog .download h3 {}
 
-}
 .blog .download .down p {
     float: left;
     height: 100%;
@@ -562,9 +560,18 @@ main .cards .card div a {
     color: #3fd1ff;
     display: block;
 }
-.blog .download .down a:hover{
+
+.blog .download .down a:hover {
     color: #00b6f0;
 }
+
+/*Video*/
+.blog iframe {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 40px;
+}
+
 /*Screenshots*/
 .blog > .screens {
     max-width: 100%;
@@ -573,7 +580,6 @@ main .cards .card div a {
 }
 
 .blog > .screens .screen_active {
-    border-top: 5px solid #00c2ff;
     width: 100%;
     float: left;
     padding: 0;
@@ -587,9 +593,11 @@ main .cards .card div a {
     margin: 2%;
     cursor: pointer;
 }
-.blog > .screens .screen_active{
+
+.blog > .screens .screen_active {
     cursor: default;
 }
+
 .blog > .screens .icon_active {
     opacity: .5;
     cursor: default;
@@ -660,9 +668,10 @@ main .cards .card div a {
 }
 
 /*Comments*/
-.blog .comments{
+.blog .comments {
     margin-bottom: 100px;
 }
+
 .blog .comments .response {
     width: 100%;
     margin-bottom: 30px;
@@ -705,6 +714,143 @@ main .cards .card div a {
     letter-spacing: 1px;
 
 }
+
+
+/*LOGIN*/
+.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #00c2ff, #f200ff, #00c2ff);
+    background-size: 600% 600%;
+    animation: Backgradient 31s ease infinite;
+    display: flex;
+    align-items: center;
+}
+
+.login .inner {
+    max-width: 100%;
+    width: 500px;
+    min-height: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.login .inner button {
+    border: none;
+    min-width: 100%;
+    padding: 10px;
+    background-color: #00c2ff;
+    color: white
+}
+
+.login .inner button:hover {
+    background-color: #3fd1ff
+}
+
+.login .inner button:active {
+    background-color: #00c2ff
+}
+
+.login .custom-file {
+    overflow: hidden;
+}
+
+/*CRUD ADD UPDATE*/
+.crud{
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.crud h1,
+.crud h2,
+.crud h3,
+.crud h4 {
+    letter-spacing: 2px;
+    color: #4f4f4f;
+    font-family: "Halvetica Bold"
+}
+
+.crud .container{
+    box-shadow: 0 0 100px rgba(0,0,0,0.2);
+    background-color: white;
+    padding: 50px;
+    min-height: 600px;;
+}
+.crud .input-group-text{
+    background-color: #00c2ff;
+    color: white;
+}
+
+
+/*Uploading files*/
+.files{
+    display: inline-block;
+    min-width: 80px;
+    cursor: pointer;
+}
+.files input{
+    display: none;
+}
+.files label{
+    cursor: pointer;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 38px;
+    background-color: #00c2ff;
+    text-align: center;
+    color: white;
+    float: left;
+    line-height: 36px;
+}
+.ln_wr{
+    color: yellow !important;
+}
+.files>i{
+    float: left;
+    padding: 10px;
+    color: white;
+    background-color: #3fd1ff;
+    height: 38px;
+    top: 0px;
+}
+.linkinp{
+    display: inherit !important;
+    background-color: #e8e8e8;
+    border: none;
+    height: 38px;
+    float: left;
+    max-width: 150px;
+    transition: .2s;
+    width: 0;
+    font-size: 14px;
+/*
+    float: left;
+    width: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    transition: .2s;
+    border: none;
+*/
+}
+.linkinp2{
+    padding: 10px !important;
+    width: 100px !important;
+
+}
+
+
+
+
 
 
 
@@ -859,52 +1005,6 @@ footer .row .text {
 footer a:hover {
     color: white;
 }
-
-
-/*LOGIN*/
-.login {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, #00c2ff, #f200ff, #00c2ff);
-    background-size: 600% 600%;
-    animation: Backgradient 31s ease infinite;
-    display: flex;
-    align-items: center;
-}
-
-.login .inner {
-    max-width: 100%;
-    width: 500px;
-    min-height: 600px;
-    margin: auto;
-    background-color: white;
-    border-radius: 5px;
-    padding: 50px;
-}
-
-.login .inner button {
-    border: none;
-    min-width: 100%;
-    padding: 10px;
-    background-color: #00c2ff;
-    color: white
-}
-
-.login .inner button:hover {
-    background-color: #3fd1ff
-}
-
-.login .inner button:active {
-    background-color: #00c2ff
-}
-
-.login .custom-file {
-    overflow: hidden;
-}
-
 
 
 
@@ -1122,51 +1222,59 @@ footer a:hover {
         margin-top: 50px;
     }
 
-/*BLOG*/
-.blog .details {
-    font-size: 10px
-}
+    /*BLOG*/
+    .blog .details {
+        font-size: 10px
+    }
 
-.blog .details i {
-    font-size: 16px;
-}
-
+    .blog .details i {
+        font-size: 16px;
+    }
+    .blog iframe{
+        height: 350px;
+    }
     /*    FOOTER*/
     footer {
         background-image: none;
     }
 
 
-    
-/*    GENERAL*/
-    h1{
+
+    /*    GENERAL*/
+    h1 {
         font-size: 30px
     }
-    h2{
+
+    h2 {
         font-size: 26px;
     }
-    h3{
+
+    h3 {
         font-size: 22px;
     }
-    h4{
+
+    h4 {
         font-size: 20px;
     }
-    p{
+
+    p {
         font-size: 15px;
     }
-    label{
+
+    label {
         font-size: 14px;
     }
-    .btn{
+
+    .btn {
         padding: 5px;
         font-size: 14px;
     }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 }
 
@@ -1231,8 +1339,9 @@ a:hover {
 .text-tiny {
     font-size: 12px;
 }
+
 .text-grey {
-    color: #777;
+    color: #777 !important;
 }
 
 .clear {
@@ -1260,9 +1369,30 @@ a:hover {
 .homepage .entry .text-huge {
     font-size: 45px;
 }
-.ls1{
+
+.ls1 {
     letter-spacing: 1px
 }
+
+.after-blue{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.after-blue:after{
+    content: " ";
+    width: 50%;
+    height: 2px;
+    background-color: #00c2ff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+
+
 
 
 @keyframes loading {
@@ -1398,8 +1528,42 @@ div.startup {
     border-bottom: 2px solid #00c2ff;
 }
 
+/*Hints*/
+.popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+}
+
+.popin{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    overflow: hidden;
+}
 
 
+.popin iframe{
+    width: 100%;
+    height: 100vh;
+}
+.popup i{
+    position: absolute;
+    font-size: 30px;
+    right: 10px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+
+}
 
 
 
