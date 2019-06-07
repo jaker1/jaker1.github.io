@@ -191,7 +191,8 @@ $(".login .input input").on("keyup", function () {
 $(".crud .files>i").on('click', function () {
     $(this).prev().toggleClass("linkinp2");
     if($(this).prev().val().length){
-       $(this).toggleClass("ln_wr")
+//       $(this).prop("title","Title is given");
+       $(this).toggleClass("ln_wr");
     }
 });
 

@@ -309,7 +309,7 @@ header nav div {
 }
 
 header nav div form {
-    min-width: 300px;
+    min-width: 400px;
     position: absolute;
     top: 90px;
     left: 15px;
@@ -318,23 +318,25 @@ header nav div form {
 
 header nav div form .fa-search {
     font-size: 18px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, .3);
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .3);
     color: white;
     float: left;
     border-radius: 5px;
     margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 header nav input {
     float: left;
-    border: 2px solid rgba(255, 255, 255, .5);
-    background-color: rgba(255, 255, 255, .3);
-    padding: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0,.5);
+    padding: 12px;
     border-radius: 4px;
     transition: .2s;
-    color: #555;
-    min-width: 250px
+    color: white;
+    min-width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 header nav input::-webkit-input-placeholder {
@@ -485,6 +487,54 @@ main .cards .card .author_icon {
 
 main .cards .card div a {
     color: inherit;
+}
+
+
+
+
+
+
+
+/*Share*/
+.share{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+}
+.share i{
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #00c2ff;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+.share i:last-child{
+    margin: 0;
+    padding: 20px;
+    width: 60px;
+    height: 60px;
+}
+.share i:hover{
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    background-color: #3fd1ff
+}
+
+/*BreadCrumb*/
+.breadcrumb{
+    font-size: 14px;
+}
+.breadcrumb a{
+    color: #00b6f0;
 }
 
 /*Blog*/
@@ -781,10 +831,13 @@ main .cards .card div a {
     min-height: 600px;;
 }
 .crud .input-group-text{
-    background-color: #00c2ff;
+    background-color: #333;
     color: white;
 }
 
+.inp_focused{
+    box-shadow: 0 0 0 0.2rem rgba(225,83,97,.5);
+}
 
 /*Uploading files*/
 .files{
@@ -794,6 +847,7 @@ main .cards .card div a {
 }
 .files input{
     display: none;
+    font-family: "Halvetica Light"
 }
 .files label{
     cursor: pointer;
@@ -801,14 +855,14 @@ main .cards .card div a {
     padding-left: 10px;
     padding-right: 10px;
     height: 38px;
-    background-color: #00c2ff;
+    background-color: #333;
     text-align: center;
     color: white;
     float: left;
     line-height: 36px;
 }
 .ln_wr{
-    color: yellow !important;
+    background-color: orange !important;
 }
 .files>i{
     float: left;
@@ -842,6 +896,8 @@ main .cards .card div a {
     width: 100px !important;
 
 }
+
+
 
 
 
@@ -1385,11 +1441,13 @@ a:hover {
 }
 
 
+.pointer{
+    cursor: pointer;
+}
 
 
 
-
-
+/*Loading*/
 @keyframes loading {
 
     from,
@@ -1405,8 +1463,6 @@ a:hover {
         opacity: 1;
     }
 }
-
-/*Loading*/
 
 /*For cards*/
 .cards .cardsloading {

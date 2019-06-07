@@ -109,23 +109,34 @@
 
     <div class="crud pt-md-5 pb-md-5">
         <div class="container p-3 p-md-5">
-            <h1 class="mb-4">Adding Page</h1>
-            <div class="alert alert-primary hal-light" role="alert">
+            <h1 class="mb-3">Adding Page</h1>
+            
+            
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">MinecraftStorage</a></li>
+                    <li class="breadcrumb-item"><a href="#">Add</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Mod</li>
+                </ol>
+            </nav>
+            
+            
+            <div class="alert alert-info hal-light" role="alert">
                 This is the page where you can add materials to our website. It is good idea to help us to extend the database that website owns, as it will increase your rank among other publishers, by this way soon you may become top blogger of MinecraftStorage!
             </div>
-            <div class="alert alert-primary hal-light" role="alert">
+            <div class="alert alert-info hal-light mb-5" role="alert">
                 Now choose the type of material you want to add, whether it is mod, texture, shader or map
             </div>
-            <a class="btn btn-danger" href="">Mod</a>
-            <a class="btn btn-light" href="">Texture</a>
-            <a class="btn btn-info" href="">Shader</a>
+            <a class="btn btn-danger inp_focused mr-2" href="">Mod</a>
+            <a class="btn btn-dark mr-2" href="">Texture</a>
+            <a class="btn btn-dark mr-2" href="">Shader</a>
             <a class="btn btn-dark" href="">Map</a><br><br><br>
 
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Title*</span>
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+                <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1" required>
             </div>
 
             <div class="input-group mb-4">
@@ -140,9 +151,12 @@
 
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Video( HTML link from youtube) <i class="fa fa-question pointer hint" aria-hidden="true" data-src="img/Explain/youtube.png"></i></span>
+                    <span class="input-group-text">Video ( HTML link )</span>
                 </div>
                 <input type="text" class="form-control" placeholder="Video" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text pointer" id="basic-addon2"><i class="fa fa-question pointer hint" aria-hidden="true" data-src="img/Explain/youtube.png"></i></span>
+                </div>
             </div>
 
             <div class="input-group mb-5">
@@ -154,46 +168,46 @@
                     <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                 </div>
             </div>
-            
+
             <h4 class="mb-3 text-grey after-blue">Description*</h4>
             <textarea name="" minlength="10" required></textarea><br><br>
 
             <h4 class="mb-3 text-grey after-blue">Description in Russian</h4>
             <textarea name="" minlength="10"></textarea><br><br>
-            
+
             <h4 class="mb-3 text-grey after-blue">Installation*</h4>
             <textarea name="" minlength="10" required></textarea><br><br>
 
             <h4 class="mb-3 text-grey after-blue">Installation in Russian</h4>
             <textarea name="" minlength="10"></textarea><br><br>
-       
-           <h4 class="mb-4">Upload file <i class="fa fa-upload"></i> or give a link to file <i class="fa fa-link"></i></h4>
-           <div class='files'>
-              <label title="Upload" data-toggle="tooltip"><input type='file' name='file%s'>1.7.10 <i class="fa fa-upload" aria-hidden="true"></i></label>
-              <input type='text' name='link%s' class='linkinp' placeholder="Link...">
-              <i class="fa fa-link" aria-hidden="true" title="Give a link" data-toggle="tooltip"></i>
+
+            <h4 class="mb-4">Upload file <i class="fa fa-upload"></i> or give a link to file <i class="fa fa-link"></i></h4>
+            <div class='files'>
+                <label title="Upload" data-toggle="tooltip"><input type='file' name='file%s'>1.7.10 <i class="fa fa-upload" aria-hidden="true"></i></label>
+                <input type='text' name='link%s' class='linkinp' placeholder="Link...">
+                <i class="fa fa-link" aria-hidden="true" title="Give a link" data-toggle="tooltip"></i>
             </div>
             <div class='files'>
-              <label title="Upload" data-toggle="tooltip"><input type='file' name='file%s'>1.8 <i class="fa fa-upload" aria-hidden="true"></i></label>
-              <input type='text' name='link%s' class='linkinp' placeholder="Link...">
-              <i class="fa fa-link" aria-hidden="true" title="Give a link" data-toggle="tooltip"></i>
+                <label title="Upload" data-toggle="tooltip"><input type='file' name='file%s'>1.8 <i class="fa fa-upload" aria-hidden="true"></i></label>
+                <input type='text' name='link%s' class='linkinp' placeholder="Link...">
+                <i class="fa fa-link" aria-hidden="true" title="Give a link" data-toggle="tooltip"></i>
             </div>
-            
-            
+
+
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Tags</span>
                 </div>
                 <input type="text" class="form-control" placeholder="Tags" aria-describedby="basic-addon1">
             </div>
-            
+
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Original Author</span>
                 </div>
                 <input type="text" class="form-control" placeholder="Author" aria-describedby="basic-addon1">
             </div>
-            
+
             <h4>Additional links</h4>
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
@@ -208,8 +222,8 @@
                 <input type="text" class="form-control" placeholder="Link 2" aria-describedby="basic-addon1">
             </div>
             <button type="button" class="btn btn-dark">Publish</button>
-            
-       
+
+
         </div>
     </div>
 
