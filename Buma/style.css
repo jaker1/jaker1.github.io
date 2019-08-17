@@ -1,0 +1,324 @@
+body{
+    font-family: "Halvetica";
+}
+
+/*Header*/
+header nav{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    height: 60px;
+}
+header nav>img{
+    margin: auto;
+    width: 80px;
+}
+header nav ul{
+    margin: auto;
+    padding: 0;
+    height: 100%;
+}
+header nav ul li{
+    position: relative;
+    display: flex;
+    float: left;
+    list-style: none;
+    margin: auto;
+    margin-right: 20px;
+    height: 100%;
+}
+header ul li a{
+    display: block;
+    margin: auto;
+    color: #888;
+    position: relative;
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: "Halvetica light";
+    letter-spacing: .05em;
+}
+header ul li::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00b6ff;
+    transition: .4s;
+}
+header ul li:hover::after{
+    width: 100%;
+}
+header ul li:hover>a{
+    color: #00b6ff;
+}
+/*For active*/
+header nav li.active:after{
+    width: 100%;
+}
+header nav li.active{
+    color: #00b6ff;
+}
+/*Dropdown*/
+.dropdown{
+    display: none;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    width: 150px;
+    border-radius: 5px;
+}
+.dropdown::after{
+    content: " ";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white
+}
+.dropdown a:hover{
+    color: #00b6ff;
+}
+/*Entry*/
+.entry{
+    background-image: url(img/eb545cebe8133f2.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.entry .inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.entry .inner>img{
+    opacity: 0;
+
+}
+.entry h2{
+    font-family: "Halvetica Bold";
+    color: #f7f7f7;
+    text-transform: uppercase;
+}
+.entry .labels label{
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+.entry .inner a{
+    display: block;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #00b6ff, #00ffd3) ;
+    box-shadow: 0 0 30px #00b6ff;
+    max-width: 180px;
+    margin: auto;
+    transition: .4s;
+    position: relative;
+    animation: move 10s infinite ease-in-out;
+}
+.entry .inner a:hover{
+    box-shadow: none;
+    text-decoration: none;
+    background-position: 180px
+}
+
+/*ScrollBar*/
+/*
+.scrollbar{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.scrollbar .scroll{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 100px;
+}
+.scrollbar .scroll:first-child{
+    background-color: #03ff00;
+    box-shadow: 0 0 20px 10px #03ff00;
+}
+*/
+
+
+
+
+
+@media screen and (max-width: 1200px){
+/*Entry*/
+    .entry img{
+        width: 200px;
+    }
+
+    
+}
+
+@media screen and (max-width: 700px){
+    /*HEADER*/
+    header nav>img{
+/*
+        margin: auto;
+        width: 60px;
+        min-width: 60px;
+*/
+        display: none;
+    }
+    header ul li a{
+        font-size: 12px;
+    }
+    header ul li .dropdown{
+        top: 60px;
+    }
+    /*Entry*/
+    .entry .inner{
+        width: 80%;
+    }
+    .entry img{
+        width: 200px;
+    }
+    .entry .ml6{
+        margin: 0;
+    }
+    
+    
+}
+
+
+
+/*General*/
+.pointer{
+    cursor: pointer;
+}
+a{
+    text-decoration: none !important;
+}
+
+
+
+/*Animations*/
+@keyframes move{
+    0%,90%{
+        left: 0;
+    }
+    91%{
+        left: -5px;
+    }
+    93%{
+        left: 5px;
+    }
+    95%{
+        left: -5px;
+    }
+    97%{
+        left: 5px;
+    }
+    99%{
+        left: -5px   
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+/*FONTS*/
+@font-face {
+    font-family: "Halvetica";
+    src: url("fonts/Halvetica/HelveticaNeueCyr-Medium.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Halvetica Thin";
+    src: url("fonts/Halvetica/HelveticaNeueCyr-Thin.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Halvetica Bold";
+    src: url("fonts/Halvetica/HelveticaNeueCyr-Bold.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Halvetica Light";
+    src: url("fonts/Halvetica/HelveticaNeueCyr-Light.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik/Rubik.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+.rubik{
+    font-family: "Rubik";
+}
+.ls1{
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+/*Scroller*/
+::-webkit-scrollbar-button {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #444;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #00c2ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: yellowgreen;
+}
+
+::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+

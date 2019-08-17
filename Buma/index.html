@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buma</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="additions/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href="additions/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="additions/animate/animate.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a href="">Home</a></li>
+                <li><a class="pointer">Products</a>
+                <div class="dropdown">
+                    <a href="">Shampoo</a>
+                    <a href="">Liquid</a>
+                    <a href="">Soap</a>
+                    <a href="">Window</a>
+                    <div class="clear"></div>
+                </div>
+                
+                </li>
+            </ul>
+            <img src="img/icon2.png">
+             <ul>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">Sales Map</a></li>
+            </ul>
+        </nav>
+        <div class="entry">
+            <div class="inner">
+                <img src="img/logo.png" class="visible animated fadeInUp">
+                <h2 class="my-4 visible animated fadeInLeft">We produce cleanliness</h2>
+                <div class="labels my-4 visible animated fadeInLeft">
+                    <label>Absoulute</label>
+                    <label>Vispa</label>
+                    <label>Блик</label>
+                    <label>Толк</label>
+                    <label>Капля</label>
+                    <label>Spry</label>
+                </div>
+                <a href="" class="rubik ls1">Наша Продукция</a>
+            </div>
+        </div>
+    </header>
+    <main></main>
+    <footer></footer>
+    
+    <div class="scrollbar">
+        <div class="scroll"></div>
+        <div class="scroll"></div>
+        <div class="scroll"></div>
+        <div class="scroll"></div>
+    </div>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="/js/blackblock.js"></script>
+<script src="https://unpkg.com/popper.js"></script>
+<script src="/additions/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 1000,
+    delay: function(el, i) {
+      return 50 * i;
+    }
+  });  
+</script>
+</html>
