@@ -103,6 +103,7 @@ header nav li.active {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+    min-height: 900px;
     position: relative;
 }
 
@@ -314,7 +315,8 @@ header nav li.active {
 }
 
 .pros .container {
-    min-height: 500px
+    min-height: 500px;
+    padding: 0;
 }
 
 .pros .row > div {
@@ -389,7 +391,7 @@ header nav li.active {
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100% - 20px);
+    height: calc(100% - 30px);
     overflow: hidden;
     background-color: white;
     color: #555;
@@ -650,7 +652,12 @@ footer .social a {
     header nav > img {
         display: none;
     }
-
+    header nav ul{
+        margin: 0;
+    }
+    header nav ul li{
+        margin: 0;
+    }
     header ul li a {
         font-size: 12px;
     }
@@ -693,11 +700,12 @@ footer .social a {
     }
     .about .border .inner h1{
         width: 100%;
+        font-size: 40px;
     }
     /*Sales*/
     .sales img {
         width: 100%;
-        padding: 20px 0
+        padding: 20px 10px
     }
 
     /*Pros*/
@@ -708,7 +716,9 @@ footer .social a {
     .pros::before{
         content: none;
     }
-
+    .pros .row > div {
+        padding: 5px;   
+    }
     /*  Contacts*/
     .contacts .contact {
         position: relative;
