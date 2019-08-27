@@ -691,6 +691,9 @@ footer .social a {
         padding-left: 20px;
         padding-right: 20px;
     }
+    .about .border .inner h1{
+        width: 100%;
+    }
     /*Sales*/
     .sales img {
         width: 100%;
