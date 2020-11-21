@@ -1,0 +1,167 @@
+@import 'general';
+@import 'animations';
+
+
+
+main.login{
+    min-height: 100vh;
+    padding: 50px;
+    @include sm{ padding: 20px;}
+    align-items: flex-start;
+    margin-top: 100px;
+    @include sm{ margin-top: 40px;}
+    @include sm{ display: block !important}
+
+    &>div:first-child{
+        max-width: 450px;
+        padding: 50px;
+        @include md{ padding: 20px;}
+        background-color: #fff;
+        @include md{background-color: transparent; box-shadow: none;}
+        border-radius: 10px;
+        box-shadow: -10px -10px 20px rgba($color: white, $alpha: .5),
+                    10px 10px 20px rgba($color: $lightgrey3, $alpha: .5);
+
+
+        h2{
+            font-size: 22px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .fas{
+            color: #3AD4BD;
+            font-size: 25px;
+            width: 50px;
+        }
+
+        input{
+            width: 350px;
+            background-color: #fff;
+            border: 1px solid #A8D2CC;
+            // font-size: 14px;
+            @include md{ background-color: transparent; }
+
+            &:focus{
+                border-color: $blue2;
+            }
+        }
+        input::placeholder{
+            color: $darkgrey;
+            font-family: $ilight;
+            
+        }
+
+        button{
+            @include btn1($sitecolor2, 0 5px 10px rgba(#00886B, .5));
+            padding: 8px 40px;
+            color: darken($color: $sitecolor2, $amount: 20);
+            font-family: $ilight;
+            transition: .2s;
+            @include md{ padding: 10px 30px; font-size: 15px;}
+            
+
+            &:hover{
+                background-color: darken($sitecolor2, 5);
+            }
+        }
+
+
+        .secondary_logins{
+            margin-top: 40px;
+            p{
+                font-style: italic;
+            }
+            p:first-child{
+                color: $darkgrey2;
+                text-align: center;
+                font-family: $ilight;
+                font-style: italic;
+                position: relative;
+
+                &::before{
+                    content: " ";
+                    position: absolute;
+                    width: 50% - 5%;
+                    height: 1px;
+                    background-color: $grey;
+                    left: 0px;
+                    top: 50%;
+                }
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    width: 50% - 5%;
+                    height: 1px;
+                    background-color: $grey;
+                    right: 0px;
+                    top: 50%;
+                }
+                
+            }
+            .social{
+                a{
+                    display: inline-block;
+                    padding: 6px 0px;
+                    width: 60px;
+                    text-align: center;
+                    background-color: $sitecolor2;
+                    border-radius: 100px;
+                    color: white;
+                    margin: 0px 5px;
+                    transition: .2s;
+
+                    &:hover{
+                        background-color: darken($color: $sitecolor2, $amount: 20);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    &>div:last-child{
+        margin-left: 30px;
+        padding: 50px;
+        background-color: #00B599;
+        border-radius: 10px;
+        max-width: 250px;
+        @include md{ display: none;}
+
+        h4{
+            color: white;
+            text-align: center;
+            font-family: $ibold;
+
+
+        }
+
+        a{
+            color: #00B599;
+            background-color: white;
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px 0;
+            border-radius: 5px;
+            position: relative;
+            top: 0;
+            transition: .2s;
+
+            &:hover{
+                box-shadow: 0 5px 10px rgba($color: #00886B, $alpha: .5);
+                top: -5px;
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+}

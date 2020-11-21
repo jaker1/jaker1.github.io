@@ -1,0 +1,128 @@
+@import 'general';
+@import 'animations';
+
+
+main{
+    
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    padding: 100px 50px;
+    @include md{padding: 20px;}
+    .left{
+        max-width: 300px;
+        img{
+            max-width: 300px;
+        }
+
+        .tags{
+            h6{
+                color: #919191;
+                text-transform: uppercase;
+                font-family: $isbold;
+                font-size: $small;
+                margin-bottom: 20px;
+            }
+            a{
+                display: inline-block;
+                padding: 8px 20px;
+                background-color: $sitecolor2;
+                color: white;
+                border-radius: 50px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .right{
+        padding-left: 8%;
+        h1{
+            font-size: 36px;
+            font-family: $isbold;
+            color: $darkblue;
+        }
+
+        .details{
+            max-width: 350px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            color: $darkblue2;
+
+            i{
+                margin-right: 5px;
+            }
+        }
+
+        &>p{
+            margin-top: 20px;
+            color: $darkblue;
+            line-height: 30px;
+            max-width: 600px;
+            font-size: 18px;
+        }
+
+        .details2{
+            label{
+                margin-bottom: 10px;
+            }
+        }
+
+        .download{
+            h3{
+                font-size: 20px;
+                // text-transform: uppercase;
+                letter-spacing: -0.07;
+                font-family: $isbold;
+                color: $darkblue;
+                margin-bottom: 35px;
+            }
+            h6{
+                margin-top: 40px;
+                margin-bottom: 20px;
+                color: $darkgrey;
+            }
+            .types{
+                margin-left: 30px;
+            }
+            .types>div{
+                max-width: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .checkbox{
+                .tick{
+                    // background-color: $sitecolor2;
+                    border: 1px solid $grey;
+                    text-align: center;
+                    padding: 5px 15px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: .2s;
+
+                    &:active{
+                        transform: scale(1.1);
+                    }
+
+                    &.checked{
+                        background-color: $sitecolor2;
+                        border: 1px solid $sitecolor2;
+                        i{
+                            color: white;
+                        }
+                    }
+                    i{
+                        color: $grey;
+                    }
+                }
+            }
+            
+
+        }
+
+
+    }
+
+}

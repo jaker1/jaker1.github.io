@@ -1,0 +1,57 @@
+// Homepage
+@keyframes textureblock{
+
+    from, to{
+        top: 0px;
+    }
+    50%{
+        top: 50px;
+    }
+
+}
+@keyframes textureblock2{
+
+    from, to{
+        top: 50px;
+        
+    }
+    50%{
+        top: 0px;
+    }
+
+}
+@keyframes textureblock_shadow{
+    from,
+    to {
+        transform: scale(0.9) translate(-50%,0);
+    }
+
+    50% {
+        transform: scale(1) translate(-50%,0);
+    }
+}
+@keyframes textureblock_shadow2{
+    from,
+    to {
+        transform: scale(1) translate(-50%,0);
+    }
+
+    50% {
+        transform: scale(0.9) translate(-50%,0);
+    }
+}
+
+// Cool Btn (Explore)
+@keyframes coolbtn_animation{
+    from,to{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(40px);
+        width: 280px;
+    }
+    40%{
+        transform: translateX(0);
+        width: 230px;
+    }
+}
