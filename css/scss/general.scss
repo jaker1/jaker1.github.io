@@ -404,9 +404,12 @@ label{
 
     &:hover{
         transform: perspective(3em) rotateX(0deg) rotateY(-1deg) rotateZ(-1deg);
+
+        // img{
+        //     transform: perspective(0) rotateX(0deg) rotateY(1deg) rotateZ(1deg) !important;
+        // }
     }
 
-    // 
 
     .title{
         margin-top: 40px;
@@ -427,6 +430,7 @@ label{
     img{
         width: 100%;
         max-width: 180px;
+        transition: .2s;
     }
 
     &.type2{
