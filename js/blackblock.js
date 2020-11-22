@@ -76,7 +76,7 @@ for(var item of checkbox){
     $(item).find(".tick").click(function (e) { 
         
         $(this).toggleClass("checked")
-        $(this).next().value
+        $(this).next().val("yes");
 
         
     });

@@ -8,6 +8,7 @@ main{
     align-items: top;
     justify-content: center;
     padding: 100px 50px;
+    flex-wrap: wrap;
     @include md{padding: 20px;}
     .left{
         max-width: 300px;
@@ -69,7 +70,7 @@ main{
         }
 
         .download{
-            h3{
+            &>h3{
                 font-size: 20px;
                 // text-transform: uppercase;
                 letter-spacing: -0.07;
@@ -84,45 +85,68 @@ main{
             }
             .types{
                 margin-left: 30px;
-            }
-            .types>div{
-                max-width: 300px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
 
-            .checkbox{
-                .tick{
-                    // background-color: $sitecolor2;
-                    border: 1px solid $grey;
-                    text-align: center;
-                    padding: 5px 15px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    transition: .2s;
-
-                    &:active{
-                        transform: scale(1.1);
+                &>div{
+                    label{
+                        color: $darkblue;
                     }
-
-                    &.checked{
-                        background-color: $sitecolor2;
-                        border: 1px solid $sitecolor2;
-                        i{
-                            color: white;
-                        }
-                    }
-                    i{
-                        color: $grey;
-                    }
+                    max-width: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
                 }
             }
+
+            .download_btn{
+                border: none;
+                @include btn1(linear-gradient(120deg, #2AC9A8, #00FFE8), 0 5px 20px rgba(#18C688, .3));
+                color: white;
+                width: 160px;
+                margin-top: 30px;
+                position: relative;
+                top: 0;
+                transition: .4s;
+
+                &:hover{
+                    top: 5px;
+                    box-shadow: none;
+                }
+            }
+            
+
+
+
             
 
         }
 
 
     }
+
+
+    .similar{
+        align-self: flex-end;
+        margin-top: 100px;
+        width: 80%;
+
+        .cards{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        &>h3{
+            text-transform: uppercase;
+            font-size: 16px;
+            font-family: $isbold;
+            margin-bottom: 20px;
+            background-color: $sitecolor2;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    }
+
+
 
 }

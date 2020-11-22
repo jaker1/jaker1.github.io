@@ -133,7 +133,16 @@
 }
 
     
+
+
+
+
+
+
+
+
 // GENERAL
+
 // Text selection
 html {
     scroll-behavior: smooth;
@@ -183,6 +192,34 @@ input{
     @include md{
         padding: 10px 15px;
         width: 200px;
+    }
+}
+
+// Checkbox
+.checkbox{
+    .tick{
+        // background-color: $sitecolor2;
+        border: 1px solid $grey;
+        text-align: center;
+        padding: 5px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .2s;
+
+        &:active{
+            transform: scale(1.1);
+        }
+
+        &.checked{
+            background-color: $sitecolor2;
+            border: 1px solid $sitecolor2;
+            i{
+                color: white;
+            }
+        }
+        i{
+            color: $grey;
+        }
     }
 }
 
@@ -349,6 +386,93 @@ label{
     border-radius: 5px;
 
 }
+
+
+// Blocks
+.card_reg{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 280px;
+    box-shadow: 0 30px 30px -20px $grey;
+    transition: .2s;
+    cursor: pointer;
+
+
+    &:hover{
+        transform: perspective(3em) rotateX(0deg) rotateY(-1deg) rotateZ(-1deg);
+    }
+
+    // 
+
+    .title{
+        margin-top: 40px;
+        i{
+            color: $sitecolor2;
+            text-shadow: 0 2px 4px #2DD4BB;
+            font-size: 25px;
+        }
+        h5{
+            margin-top: 20px;
+            color: #09443B;
+            font-family: $isbold;
+            letter-spacing: 1.5;
+            font-size: 16px;
+        }
+    }
+
+    img{
+        width: 100%;
+        max-width: 180px;
+    }
+
+    &.type2{
+        width: 280px;
+        position: relative;
+        min-height: 300px;
+        overflow: hidden;
+
+        .likes{
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            z-index: 2;
+            color: white;
+            display: flex;
+            align-items: center;
+            i{
+                font-size: 18px;
+                margin-left: 8px;
+            }
+            label{
+                font-size: $small;
+                font-family: $ilight;
+            }
+        }
+        .imagediv{
+            height: 200px;
+            width: 100%;
+        }
+        img{
+            width: 120%;
+            position: absolute;
+            max-width: 150%;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, 40%);
+
+        }
+    }
+}
+
+
+
+
+
+
 
 // Classes
 .bg-site{
