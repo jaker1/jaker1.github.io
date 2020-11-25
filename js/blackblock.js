@@ -35,7 +35,7 @@ $(".slideto").click(function (e) {
 
 
 
-$("header .fa-search").click(()=>{
+$("header .fa-search:not(header.type2 .fa-search)").click(()=>{
     if(functions.isVisible($(".search")[0])){
         $(".search").fadeOut(200)
     }
@@ -44,6 +44,28 @@ $("header .fa-search").click(()=>{
     }
     
 })
+
+
+$("header.type2 .grid_icon").click(element => { 
+
+    $("header .leftmenu>.active")[0].style.transform = "translate(-100%)";
+
+    setTimeout(() => {
+        $("header .leftmenu>div:not(.active)")[0].style.transform = "translate(0%)";
+
+            // Changing active classes
+            var active = $("header .leftmenu>.active");
+            $("header .leftmenu>div:not(.active)").addClass("active");
+
+            active.removeClass("active")
+    }, 500);
+    
+
+
+
+
+});
+
 
 
 // General
@@ -97,6 +119,13 @@ for(var i=0;i<card.length;i++){
 }
 
 
+
+
+
+// Initializers
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
 
 
 
