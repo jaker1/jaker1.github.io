@@ -151,6 +151,9 @@ body {
     font-family: Inter, Arial, "Helvetica Neue", Helvetica, sans-serif;
     background-color: #ECEEF5;
 }
+main{
+    height: 100vh;
+}
 *::selection{
     color: white;
     background-color: $sitecolor;

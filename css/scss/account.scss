@@ -9,6 +9,10 @@ header.type2{
     height: 80px;
     color: white;
     padding: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
 
     .left{
         display: flex;
@@ -167,6 +171,7 @@ header.type2{
     }
 
     .leftmenu{
+        
         .type1, .type2{
             position: fixed;
             top: 80px;
@@ -174,13 +179,12 @@ header.type2{
             background-color: white;
             height: calc(100vh - 80px);
             padding: 30px 20px;
-            z-index: 5;  
             transition: .5s;
             transition-delay: .1s;
+            box-shadow: 0 0 20px #D1D4DF;
         }
 
         .type1{
-            
             li{
                 list-style: none;
                 margin-bottom: 20px;
@@ -212,6 +216,7 @@ header.type2{
         }
 
         .type2{
+            box-shadow: none;
             transform: translate(-100%);
             li{
                 list-style: none;

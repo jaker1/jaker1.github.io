@@ -57,16 +57,20 @@ $("header.type2 .grid_icon").click(element => {
             var active = $("header .leftmenu>.active");
             $("header .leftmenu>div:not(.active)").addClass("active");
 
+            // Not active anymore
             active.removeClass("active")
+            active[0].style.boxShadow = "none";
+
+            $("header .leftmenu>div.active")[0].style.boxShadow = "0 0 20px #D1D4DF";
     }, 500);
     
-
-
-
-
 });
 
 
+
+if($("header.type2").is(":visible")){
+    document.body.style.marginTop = "140px"
+}
 
 // General
 //Select box
