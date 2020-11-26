@@ -95,6 +95,7 @@
     $sitecolor : #2DD5A1;
     $sitecolor2 : #2DD4C0;
     $sitecolor3: #27c0ae;
+    $sitecolor4: #2AC9A8;
     $blue: #008CFF;
     $blue2: #299dfc;
 
@@ -377,6 +378,15 @@ label{
     background:$bg;
     box-shadow: $shadow;
     color: $color;
+}
+
+// Headings
+@mixin title($fontsize:25px){
+    color: $darkblue;
+    text-transform: uppercase;
+    font-family: $ibold;
+    font-size: $fontsize;
+
 }
 
 
@@ -826,6 +836,20 @@ footer{
 
 .breadcrumb{
     background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+
+    li{
+        font-size: 14px;
+
+        a{
+            color: $sitecolor;
+        }
+    }
+    
 }
 
 

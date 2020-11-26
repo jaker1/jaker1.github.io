@@ -255,22 +255,115 @@ header.type2{
 
 
 
-.custom_container{
-    margin: 50px auto;
-    width: 80%;
+.container{
     @include sm{ width: 100%; margin: 20px 10px }
 
-
-    .left{
-        max-width: 200px;
-
-        img{
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 10px;
+        h1{
+            @include title;
+            letter-spacing: -1.07;
+            margin-bottom: 40px;
+            margin-top: 60px;
         }
-    }
+
+        .info{
+            background-color: white;
+            padding: 40px;
+            position: relative;
+            border-radius: 10px;
+
+            &::before{
+                position: absolute;
+                content: " ";
+                width: 10px;
+                height: 100%;
+                background-color: $sitecolor2;
+                left: -20px;
+                top: 0;
+                border-radius: 5px;
+                box-shadow: 5px 5px 10px lighten($color: $sitecolor, $amount: 20);
+            }
+            img{
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 20px;
+                margin-right: 40px;
+                box-shadow: 10px 10px 20px $grey;
+            }
+            h4{
+                @include title;
+                text-transform: inherit;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            p{
+                color: $darkblue2;
+            }
+        }
+
+        .stats{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+
+            .stat{
+                width: 20%;
+                background-color: white;
+                padding: 40px;
+                height: 200px;
+                border-radius: 10px;
+                box-shadow: 0 10px 20px -10px $lightgrey3;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+
+                // If icon exists, set it to background
+                position: relative;
+                overflow: hidden;
+                &>i{
+                    font-size: 150px;
+                    color: lighten($color: $sitecolor4, $amount: 10);
+                    position: absolute;
+                    transform: translate(-45%, 50%);
+                }
+
+                p{
+                    z-index: 2;
+                    text-transform: uppercase;
+                    color: $darkblue;
+                    i{
+                        font-size: 25px;
+                        margin-right: 5px;
+                    }
+                }
+                label{
+                    z-index: 2;
+                    font-size: 30px;
+                    font-family: $isbold;
+                    color: $sitecolor;
+                    span{
+                        font-size: 16px;
+                    }
+                }
+
+                &:first-child{
+                    background-color: $sitecolor4;
+                    color: white;
+                    box-shadow: 0 0 20px lighten($color: $sitecolor, $amount: 20);
+                    p{
+                        color: lighten($color: $sitecolor, $amount: 35);
+                    }
+                    label{
+                        color: white;
+                    }
+                }
+            }
+
+        }
+
 
 
 }
