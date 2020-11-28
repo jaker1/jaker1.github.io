@@ -55,3 +55,27 @@
         width: 230px;
     }
 }
+
+
+
+// Fade Effects
+@keyframes slideFade{
+    50%{
+        opacity: 0;
+        
+        max-height: 200px;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+    }
+    100%{
+        opacity: 0;
+        opacity: 0;
+        padding: 0;
+        max-height: 0;
+        margin-bottom: 0;
+    }
+}
+.slideFade{
+    animation: slideFade 1s;
+    animation-fill-mode: forwards;
+}
