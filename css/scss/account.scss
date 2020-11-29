@@ -230,7 +230,7 @@
                     border-radius: 10px;
                     width: calc(100% - 70px);
                     position: relative;
-                    transition: 4s;
+                    transition: .2s;
                     color: $darkgrey;
                     max-height: 200px;
 
@@ -285,5 +285,94 @@
             }
         }
 
+        // Account settings
+        .settings{
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 50px;
+            margin: 30px 0;
+            // width: max-content;
+            // box-shadow: 10px 10px 20px lighten($color: $darkblue, $amount: 45);
+
+            .row{
+                margin: 0;
+                margin-bottom: 30px;
+            }
+
+            .row.newsletter{
+                label{
+                    font-size: 15px;
+                    color: $darkgrey3;
+                    font-family: $isbold;
+                }
+            }
+            .row.profile_photo{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+            }
+
+            .siteinput2{
+                position: relative;
+
+                &.disabled{
+                    input{
+                        background-color: $bodybg;
+                        pointer-events: none;
+                    }
+                    label{
+                        background-color: $bodybg;
+                    }
+                }
+
+
+                input{
+                    border: 1px solid #dedeea;
+                    transition: .3s;
+                    border-radius: 10px;
+                }
+
+                label{
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    left: 15px;
+                    background-color: #fff;
+                    padding: 0 5px;
+                    transition: .3s;
+                    pointer-events: none;
+                    text-transform: uppercase;
+                    color: $darkblue;
+
+                    font-size: $tiny;
+                    font-family: $isbold;
+                }
+
+                input:focus + label{
+                    top: 0px;
+                    left: 8px;
+                    font-size: 10px;
+                }
+                input:focus{
+                    border-color: $blue;
+                }
+            }
+
+            button.change_btn{
+                @include btn1($sitecolor);
+                color: white;
+                margin-left: 20px;
+                border-radius: 10px;
+                font-size: $tiny;
+                text-transform: uppercase;
+                font-family: $isbold;
+                color: lighten($color: $sitecolor2, $amount: 48);
+            }
+
+
+        }
 
 }

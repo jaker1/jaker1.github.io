@@ -103,6 +103,8 @@
 
     $red: #FF7474;
 
+    $bodybg: #ECEEF5;
+
     // Breakpoints
     $xs: "max-width: 576px";
     $sm: "max-width : 768px";
@@ -367,6 +369,11 @@ label{
     background:$bg;
     box-shadow: $shadow;
     border: none;
+    transition: .2s;
+
+    &:hover{
+        background-color: darken($bg,10);
+    }
 }
 @mixin white_btn{
     padding: 10px 30px;
@@ -717,6 +724,10 @@ header.type2{
             width: 500px;
             display: flex;
             align-items: center;
+
+            &:focus{
+                background-color: darken(#21AA8E,10);
+            }
 
             input{
                 border: none;
