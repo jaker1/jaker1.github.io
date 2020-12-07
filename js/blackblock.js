@@ -65,10 +65,35 @@ $("header.type2 .grid_icon").click(element => {
 });
 
 
-
-if ($("header.type2").is(":visible")) {
+// Header type 2
+var header2visible = $("header.type2").is(":visible");
+if (header2visible) {
     document.body.style.marginTop = "140px"
 }
+
+// HINTS
+if (header2visible) {
+    var hints = $("header.type2 .search .hints");
+    var search = $("header.type2 .search input");
+
+    search.keydown(function (e) { 
+
+        setTimeout(() => {
+
+            if(search[0].value == ""){
+                hints.fadeOut(200)
+            }
+            else{
+                hints.fadeIn(200)
+            }
+  
+        }, 10);
+
+    });
+
+}
+
+
 
 // General
 //Select box
@@ -129,32 +154,7 @@ $(function () {
 
 
 
-// Animations TEMP
-function slideFade(element, duration) { 
 
-    // element.style.transition = (duration/1000) + 's';
-    // element.style.opacity = '0';
-    // setTimeout(() => {
-    //     element.style.height = '0px';
-    //     element.style.padding = '0px';
-    //     element.style.margin = '0px';
-    // }, duration);
-    // setTimeout(() => {
-    //     element.style.display = 'none';
-    // }, 2*duration);
-
-
-    element.animate([
-        {opacity : "1", offset: 0, height : "inherit"},
-        {opacity : "0", offset: 0.5, height : "inherit"},
-        {opacity : "0", height : "0px", padding: 0, margin: 0, offset: 1}
-        // {height : "0", padding: 0, margin: 0, offset: 1}
-    ],{
-        duration: duration,
-        fill: "forwards"
-        
-    });
-}
 
 
 
@@ -193,12 +193,36 @@ if(window.innerWidth<=992){
 
 
 
-// Button trigger (SITEMODAL)
-$(".sitemodaltrigger").click(()=>{
-    $($(this).data("id")).addClass("visible animate__animated animate__fadeIn")
-})
+// Animations TEMP
+function slideFade(element, duration) { 
 
-// Manual trigger
+    // element.style.transition = (duration/1000) + 's';
+    // element.style.opacity = '0';
+    // setTimeout(() => {
+    //     element.style.height = '0px';
+    //     element.style.padding = '0px';
+    //     element.style.margin = '0px';
+    // }, duration);
+    // setTimeout(() => {
+    //     element.style.display = 'none';
+    // }, 2*duration);
+
+
+    element.animate([
+        {opacity : "1", offset: 0, height : "inherit"},
+        {opacity : "0", offset: 0.5, height : "inherit"},
+        {opacity : "0", height : "0px", padding: 0, margin: 0, offset: 1}
+        // {height : "0", padding: 0, margin: 0, offset: 1}
+    ],{
+        duration: duration,
+        fill: "forwards"
+        
+    });
+}
+
+
+
+// Deleting material --> Manual trigger of sitemodal
 $(".table .tr .fa-trash").click(function (e) {
 
     $("#deletematerial").addClass("visible animate__animated animate__fadeIn")
@@ -207,10 +231,23 @@ $(".table .tr .fa-trash").click(function (e) {
     $("#deletematerial").removeClass("animate__fadeOut")
     $("#deletematerial .inner").removeClass("animate__fadeOutUp")
 
+
+    $("#deletematerial button.btn_yes").click(()=>{
+        $(this).parent().addClass("slideFade")
+    });
+
+
     e.preventDefault();
     // slideFade($(this).parent()[0],2000)
     // $(this).parent().addClass("slideFade")
 });
+
+
+// Button trigger (SITEMODAL)
+$(".sitemodaltrigger").click(()=>{
+    $($(this).data("id")).addClass("visible animate__animated animate__fadeIn")
+})
+// Fadeout sitemodal
 $("#deletematerial button").click(()=>{
     $("#deletematerial").addClass("animate__animated animate__fadeOut")
     $("#deletematerial .inner").addClass("animate__animated animate__fadeOutUp")

@@ -4,81 +4,6 @@
 
 
 
-.sitemodal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba($color: black, $alpha: .5);
-    z-index: 100;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    visibility: hidden;
-
-
-    &.type2{
-        background-color: transparent;
-        align-items: flex-start;
-        .inner{
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            box-shadow: 0 0px 10px $lightgrey3;
-
-            padding: 20px 50px;
-        }
-    }
-
-
-    .inner{
-        background-color: #fff;
-        padding: 50px;
-        border-radius: 5px;
-
-        h4{
-            color: $sitecolor2;
-            font-family: $isbold;
-        }
-
-        p{
-            margin: 20px 0;
-            font-size: 18px;
-        }
-
-        .buttons{
-            margin-top: 40px;
-            display: flex;
-            justify-content: flex-end;
-            button{
-                font-size: 18px;
-                padding: 5px 35px;
-
-                background-color: $sitecolor2;
-                border: none;
-                border-radius: 5px;
-                color: white;
-                margin-left: 20px;
-            }
-            & button:first-child{
-                background-color: transparent;
-                border: none;
-                color: $darkgrey3;
-                padding: 5px 20px;
-            }
-            & button:last-child{
-                &:hover{
-                    background-color: $sitecolor3;
-                }
-            }
-            
-        }
-
-    }
-}
-
 
 
 
@@ -312,6 +237,46 @@
                     height: 100px;
                     object-fit: cover;
                     border-radius: 20px;
+                }
+                p{
+                    margin-left: 20px;
+                }
+            }
+
+            .adetails{
+                margin-top: 50px;
+                h6{
+                    text-transform: uppercase;
+                    font-family: $isbold;
+                    color: $darkblue;
+                }
+                .save_btn{
+                    @include btn1($sitecolor2, 0 10px 20px -10px lighten($sitecolor2, 20));
+                    color: white;
+                }
+            }
+
+
+
+            .promptinput{
+                display: flex;
+                .prompt{
+                    background-color: $sitecolor2;
+                    padding: 10px 15px;
+                    width: 45px;
+                    text-align: center;
+                    color: white;
+                    // border-top-left-radius: 5px;
+                    // border-bottom-left-radius: 5px;
+                    border-radius: 5px;
+                }
+                input{
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border: none;
+                    background-color: $lightgrey4;
+                    padding: 0 10px;
+                    font-size: 14px;
                 }
             }
 

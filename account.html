@@ -23,8 +23,8 @@
                 <h4>Removing material</h4>
                 <p>Are your sure to delete this material?</p>
                 <div class="buttons">
-                    <button>No</button>
-                    <button>Yes</button>
+                    <button class="btn_no">No</button>
+                    <button class="btn_yes">Yes</button>
                 </div>
             </div>
         </div>
@@ -38,9 +38,6 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
 
     <header class="type2">
@@ -66,8 +63,16 @@
         <div class="middle">
             <div class="search">
                 <input type="text" class="search" name="search"
-                    placeholder="Search here materials, models and imperfections">
+                    placeholder="Search here materials, models and imperfections" autocomplete="off">
                 <i class="fal fa-search"></i>
+
+                <div class="hints">
+                    <a href=""><li>Cubic World</li></a>
+                    <a href=""><li>Minecraft</li></a>
+                    <a href=""><li>Bedwars</li></a>
+                    <a href=""><li>Kingdom Come</li></a>
+                    <a href=""><li>Vikings Age</li></a>
+                </div>
             </div>
 
         </div>
@@ -255,10 +260,9 @@
 
             <div class="settings">
                 <form action="" method="post">
-                    <div class="row profile_photo">
+                    <div class="row profile_photo align-items-center">
                         <img src="/img/temp/photo.jpg" alt="">
                         <div>
-                            <p>Click to change your profile photo</p>
                             <button class="change_btn">Change Photo</button>
                         </div>
                         
@@ -289,15 +293,44 @@
                         <button class="change_btn">Change Email</button>
                     </div>
                     <div class="row newsletter">
-                        <label>Do you want to receive regular newsletter from us:</label>
+                        <label class="text-secondary">Do you want to receive regular newsletter from us</label>
                         <div class="custom-control custom-switch ml-3">
                             <input type="checkbox" class="custom-control-input" id="customSwitch1">
                             <label class="custom-control-label" for="customSwitch1"></label>
                         </div>
                     </div>
 
+                    <div class="adetails">
+                        <h6 class="mb-4">Additional Details</h6>
+                        <div class="row">
+                            <div class="promptinput">
+                                <div class="prompt"><i class="fal fa-link"></i></div>
+                                <input type="text" placeholder="Website">
+                            </div>
+                            <div class="promptinput ml-5">
+                                <div class="prompt"><i class="fab fa-twitter"></i></div>
+                                <input type="text" placeholder="Website">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="promptinput">
+                                <div class="prompt"><i class="fab fa-github"></i></div>
+                                <input type="text" placeholder="Website">
+                            </div>
+                            <div class="promptinput ml-5">
+                                <div class="prompt"><i class="fab fa-facebook-f"></i></div>
+                                <input type="text" placeholder="Website">
+                            </div>
+
+                        </div>
+                        <button class="save_btn">Save changes</button>
+                    </div>
+
                 </form>
             </div>
+
+
 
 
         </div>
