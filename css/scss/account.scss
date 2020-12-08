@@ -280,51 +280,7 @@
                 }
             }
 
-            .siteinput2{
-                position: relative;
-
-                &.disabled{
-                    input{
-                        background-color: $bodybg;
-                        pointer-events: none;
-                    }
-                    label{
-                        background-color: $bodybg;
-                    }
-                }
-
-
-                input{
-                    border: 1px solid #dedeea;
-                    transition: .3s;
-                    border-radius: 10px;
-                }
-
-                label{
-                    position: absolute;
-                    top: 50%;
-                    transform: translate(0, -50%);
-                    left: 15px;
-                    background-color: #fff;
-                    padding: 0 5px;
-                    transition: .3s;
-                    pointer-events: none;
-                    text-transform: uppercase;
-                    color: $darkblue;
-
-                    font-size: $tiny;
-                    font-family: $isbold;
-                }
-
-                input:focus + label{
-                    top: 0px;
-                    left: 8px;
-                    font-size: 10px;
-                }
-                input:focus{
-                    border-color: $blue;
-                }
-            }
+            
 
             button.change_btn{
                 @include btn1($sitecolor);

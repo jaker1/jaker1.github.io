@@ -40,6 +40,19 @@
     font-size: 12px;
 }
 
+.text-16{
+    font-size: 16px;
+}
+.text-18{
+    font-size: 18px;
+}
+.text-20{
+    font-size: 20px;
+}
+.text-25{
+    font-size: 25px;
+}
+
 // Screen breakpint mixins
 
 @mixin xs {
@@ -88,6 +101,7 @@
     $lightgrey2: #FBFBFB;
     $lightgrey3: #C8C8C8;
     $lightgrey4: #f7f7f7;
+    $lightgrey5: rgba(#C6C6C6,0.5);
     
 
     $darkblue: #5B627D;
@@ -116,6 +130,8 @@
     $small: 14px;
     $tiny: 12px;
 
+    
+
 
 
 
@@ -132,6 +148,9 @@
 }
 .darkgrey{
     color: $darkgrey3;
+}
+.darkblue{
+    color: $darkblue;
 }
 
 // Overriding Bootstrap classes
@@ -188,6 +207,10 @@ h1,h2,h3,h4,h5,h6{
     height: 2px;
     background-color: $sitecolor2;
 }
+
+.smallheading{
+    color: $darkblue;
+}
 // Inputs
 input:focus{
     outline: none;
@@ -206,6 +229,63 @@ input{
     }
 }
 
+.siteinput{
+    background-color: white;
+    border: none;
+    box-shadow: 0px 10px 30px -10px rgba($color: #C6C6C6, $alpha: .5);
+    
+    padding: 15px;
+
+    &::placeholder{
+        color: $grey;
+    }
+}
+
+.siteinput2{
+    position: relative;
+
+    &.disabled{
+        input{
+            background-color: $bodybg;
+            pointer-events: none;
+        }
+        label{
+            background-color: $bodybg;
+        }
+    }
+
+
+    input{
+        border: 1px solid #dedeea;
+        transition: .3s;
+        border-radius: 10px;
+    }
+
+    label{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 15px;
+        background-color: #fff;
+        padding: 0 5px;
+        transition: .3s;
+        pointer-events: none;
+        text-transform: uppercase;
+        color: $darkblue;
+
+        font-size: $tiny;
+        font-family: $isbold;
+    }
+
+    input:focus + label{
+        top: 0px;
+        left: 8px;
+        font-size: 10px;
+    }
+    input:focus{
+        border-color: $blue;
+    }
+}
 
 // Custom Modal
 .sitemodal{
@@ -1213,8 +1293,12 @@ footer{
         font-size: 14px;
 
         a{
-            color: $sitecolor;
+            color: $sitecolor2;
         }
+    }
+
+    &.type2{
+        max-width: 100%;
     }
     
 }

@@ -76,22 +76,22 @@ if (header2visible) {
     var hints = $("header.type2 .search .hints");
     var search = $("header.type2 .search input");
 
-    search.keydown(function (e) { 
+    search.keydown(function (e) {
 
         setTimeout(() => {
 
-            if(search[0].value == ""){
+            if (search[0].value == "") {
                 hints.fadeOut(200)
-            }
-            else{
+            } else {
                 hints.fadeIn(200)
             }
-  
+
         }, 10);
 
     });
 
 }
+// HEADER END
 
 
 
@@ -126,9 +126,9 @@ for (var item of checkbox) {
         $(this).toggleClass("checked")
         $(this).next().val("yes");
 
-
     });
 }
+
 
 // Cards
 var card = $(".card");
@@ -161,12 +161,12 @@ $(function () {
 
 
 // Table (removing listed elements)
-if(window.innerWidth<=992){
+if (window.innerWidth <= 992) {
     var table = $(".table");
     for (var item of table) {
         let md = $(item).data("md");
         let mds = md.split(",");
-    
+
         let trs = $(item).find(".tr");
         for (var tr of trs) {
             var children = []
@@ -177,48 +177,23 @@ if(window.innerWidth<=992){
                 tr.removeChild(element)
             });
         }
-    
+
         // Changing width
         var children_count = $(trs).eq(0).find("div").length
-        
+
         for (var tr of trs) {
             var children = $(tr).find("div");
-            for(var child of children){
-                child.style.width = 100/children_count + "%"
+            for (var child of children) {
+                child.style.width = 100 / children_count + "%"
             }
         }
-    
+
     }
 }
 
 
 
-// Animations TEMP
-function slideFade(element, duration) { 
 
-    // element.style.transition = (duration/1000) + 's';
-    // element.style.opacity = '0';
-    // setTimeout(() => {
-    //     element.style.height = '0px';
-    //     element.style.padding = '0px';
-    //     element.style.margin = '0px';
-    // }, duration);
-    // setTimeout(() => {
-    //     element.style.display = 'none';
-    // }, 2*duration);
-
-
-    element.animate([
-        {opacity : "1", offset: 0, height : "inherit"},
-        {opacity : "0", offset: 0.5, height : "inherit"},
-        {opacity : "0", height : "0px", padding: 0, margin: 0, offset: 1}
-        // {height : "0", padding: 0, margin: 0, offset: 1}
-    ],{
-        duration: duration,
-        fill: "forwards"
-        
-    });
-}
 
 
 
@@ -232,7 +207,7 @@ $(".table .tr .fa-trash").click(function (e) {
     $("#deletematerial .inner").removeClass("animate__fadeOutUp")
 
 
-    $("#deletematerial button.btn_yes").click(()=>{
+    $("#deletematerial button.btn_yes").click(() => {
         $(this).parent().addClass("slideFade")
     });
 
@@ -244,11 +219,11 @@ $(".table .tr .fa-trash").click(function (e) {
 
 
 // Button trigger (SITEMODAL)
-$(".sitemodaltrigger").click(()=>{
+$(".sitemodaltrigger").click(() => {
     $($(this).data("id")).addClass("visible animate__animated animate__fadeIn")
 })
 // Fadeout sitemodal
-$("#deletematerial button").click(()=>{
+$("#deletematerial button").click(() => {
     $("#deletematerial").addClass("animate__animated animate__fadeOut")
     $("#deletematerial .inner").addClass("animate__animated animate__fadeOutUp")
 
@@ -257,4 +232,81 @@ $("#deletematerial button").click(()=>{
         $("#deletematerial .inner").removeClass("visible animate__fadeInDown")
     }, 1000);
 })
+
+
+
+
+
+// File Inputs
+var fileinput = $(".fileinput input");
+
+$(fileinput).on("change", function () {
+    $(this).parent().siblings("label")[0].textContent = $(this)[0].value
+
+    if ($(this)[0].value == '') {
+        $(this).parent().siblings("label")[0].textContent = "Browse..."
+    }
+});
+
+// Fileinput with asynchronus upload
+var fileinput_async = $(".fileinput.async input");
+
+// User selected files
+$(fileinput_async).change(function (e) {
+
+    // Showing selected images in ImagesBlock (.images_loading)
+    var imagesBlock = $($(this).parent().parent().data("imagesblock"))[0];
+        // Clearing imagesBlock
+        imagesBlock.innerHTML = ""
+
+    // Looping through images of input
+    for (var item of fileinput_async[0].files) {
+        var reader = new FileReader();
+        reader.readAsDataURL(item);
+
+        reader.onload = function (e) {
+            imagesBlock.innerHTML += "<div><img src=" + e.target.result + "></div>";
+        };
+    }
+
+    // Uploading all the files asynchronously
+    var i = 0;
+    for (var file of fileinput_async[0].files) {
+
+        var form = new FormData();
+        form.append("file", file)
+    
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST","/upload.php");
+    
+        ajax.onprogress = (event) => {
+            console.log(event.loaded)
+        }
+        ajax.onload = () => {
+            // console.log(ajax.status + " : " + ajax.statusText)
+            var imagesBlock = $($(this).parent().parent().data("imagesblock"));
+            imagesBlock.find("div").eq(i).addClass("loaded")
+            console.log(i)
+
+            i++;
+            
+        }
+    
+        ajax.send(form);
+    }
+
+
+    // Selecting main photo
+    console.log($(".images_loading div"))
+    $(".images_loading>div").click(function (e) {
+        $(this).addClass("selected")
+    })
+
+
+});
+
+
+
+
+
 
