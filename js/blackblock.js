@@ -248,60 +248,140 @@ $(fileinput).on("change", function () {
     }
 });
 
+
 // Fileinput with asynchronus upload
 var fileinput_async = $(".fileinput.async input");
 
 // User selected files
 $(fileinput_async).change(function (e) {
 
-    // Showing selected images in ImagesBlock (.images_loading)
-    var imagesBlock = $($(this).parent().parent().data("imagesblock"))[0];
+    // Showing selected images/files in ImagesBlock (.files_loading)
+        var imagesBlock = $($(this).parent().parent().data("imagesblock"))[0];
         // Clearing imagesBlock
         imagesBlock.innerHTML = ""
 
-    // Looping through images of input
-    for (var item of fileinput_async[0].files) {
-        var reader = new FileReader();
-        reader.readAsDataURL(item);
+        // Checking for type of selected file/image -> if it is a file, then fill imagesBlock with standart file icon image
+        if(fileinput_async[1].files[0].type == "application/x-zip-compressed"){
+            imagesBlock.innerHTML += "<div> \
+                                <img src='/img/file_icons/zip.png'> \
+                                <svg class='circular_progress_bar'> \
+                                    <g style='transform: translate(50%, 50%);'> \
+                                        <circle r='40'></circle> \
+                                    </g> \
+                                </svg> \
+                            </div>";
+        }
+        else{
+            // Looping through images of input
+            for (var item of $(this)[0].files) {
+                var reader = new FileReader();
+                reader.readAsDataURL(item);
 
-        reader.onload = function (e) {
-            imagesBlock.innerHTML += "<div><img src=" + e.target.result + "></div>";
-        };
-    }
+                reader.onload = function (e) {
+                    imagesBlock.innerHTML += "<div> \
+                    <img src="+ e.target.result +"> \
+                    <svg class='circular_progress_bar'> \
+                        <g style='transform: translate(50%, 50%);'> \
+                            <circle r='40'></circle> \
+                        </g> \
+                    </svg> \
+                </div>"; 
+                };
+            }
+        }
+
 
     // Uploading all the files asynchronously
-    var i = 0;
-    for (var file of fileinput_async[0].files) {
-
-        var form = new FormData();
-        form.append("file", file)
-    
-        var ajax = new XMLHttpRequest();
-        ajax.open("POST","/upload.php");
-    
-        ajax.onprogress = (event) => {
-            console.log(event.loaded)
-        }
-        ajax.onload = () => {
-            // console.log(ajax.status + " : " + ajax.statusText)
-            var imagesBlock = $($(this).parent().parent().data("imagesblock"));
-            imagesBlock.find("div").eq(i).addClass("loaded")
-            console.log(i)
-
-            i++;
+    setTimeout(() => {
+        
+        var i = 0;
+        for (var file of $(this)[0].files) {
             
+            // Declarations
+            let imagesBlock = $($(this).parent().parent().data("imagesblock"));
+            var circular_progress_bar = imagesBlock.find("div").eq(i).find("circle");
+    
+            // Ajax query
+            var form = new FormData();
+            form.append("file", file)
+            var ajax = new XMLHttpRequest();
+    
+            // Sending PHP a TEXTURE_FILE get parameter if type is x-zip
+            if(file.type == "application/x-zip-compressed"){
+                ajax.open("POST","/upload.php?texture_file", false)
+            }
+            else{
+                i == 0 ? ajax.open("POST","/upload.php?first_request", false) : ajax.open("POST","/upload.php", false);
+            }
+            
+            
+            ajax.onprogress = (event) => {
+                // Animating progress bar
+                var percentaga_loaded = event.loaded/event.total * 100;
+                circular_progress_bar[0].style.strokeDashoffset = Math.abs(percentaga_loaded*5 - 500);
+            }
+            ajax.onload = () => {
+                // console.log(ajax.status + " : " + ajax.statusText)
+                imagesBlock.find("div").eq(i).addClass("loaded")
+                i++;
+
+                // Getting JSON and parsing it to show resolutions and types .zip file contains
+                var file_details = $(".file_details");
+                var file_details_arr = JSON.parse(ajax.response);
+
+                var resolutions = ["1k","2k","4k","8k"];
+                var resolutions_equivalents = { "1k" : "1024x" , "2k" : "2048x", "4k" : "4096x" , "8k" : "8192x"};
+
+                file_details_arr.forEach((element,index) => {
+                    if(element[resolutions[index]] == true){
+
+                        // Making resolution active in resolutions section
+                        var resolutions_s = $(".resolutions label");
+
+                        for(var resolution of resolutions_s){
+
+                            if(resolution.textContent == resolutions_equivalents[resolutions[index]]){
+                                $(resolution).addClass("active");
+                            }
+
+                        }
+
+
+                        file_details.fadeIn();
+                        file_details[0].innerHTML+="<h6 class='smallheading my-3 darkblue text-small'><span class='sitecolor'>- --></span> "+ resolutions_equivalents[resolutions[index]] +"</h6>"
+                        file_details[0].innerHTML+="<div class='check_tags' id='"+ resolutions[index] +"_check_tag'></div>"
+
+                        for(var map in element){
+                            // If element is not resolution
+                            if(resolutions.indexOf(map) == -1){
+                            
+                                if(element[map] == true){
+                                    $("#" + resolutions[index] + "_check_tag").append("<label class='active'>"+map+"</label>");
+                                }
+                                else{
+                                    $("#" + resolutions[index] + "_check_tag").append("<label>"+map+"</label>");
+                                }
+
+                            }
+                            
+                        }
+                    }
+                })
+
+                
+            }
+        
+            ajax.send(form);
         }
     
-        ajax.send(form);
-    }
+        // Selecting main photo
+        // console.log($(".images_loading div"))
+        $(".image_selectable>div").click(function (e) {
+            $(".image_selectable>div").removeClass("selected")
+            $(this).addClass("selected")
+        });
 
-
-    // Selecting main photo
-    console.log($(".images_loading div"))
-    $(".images_loading>div").click(function (e) {
-        $(this).addClass("selected")
-    })
-
+    }, 2000);
 
 });
 

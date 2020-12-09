@@ -2,6 +2,9 @@
 @import 'animations';
 
 
+
+
+// Selecting section page
 .sections{
     margin-top: 70px;
     display: flex;
@@ -39,31 +42,34 @@
         // margin-top: 20px;
     }
 
-    .images_loading{
+    .files_loading{
         display: flex;
+        flex-wrap: wrap;
         margin-top: 40px;
         &>div{
+            margin-bottom: 20px;
             width: 150px;
             height: 150px;
 
             position: relative;
             margin-right: 30px;
+            transition: .2s;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            &:after{
-                position: absolute;
-                content: " ";
-                width: 50px;
-                height: 50px;
+            // &:after{
+            //     position: absolute;
+            //     content: " ";
+            //     width: 50px;
+            //     height: 50px;
 
-                border: 5px solid $sitecolor3;
-                border-radius: 50%;
-                animation: heartBeat 1s infinite;
-                transition: .2s;
-            }
+            //     border: 5px solid $sitecolor3;
+            //     border-radius: 50%;
+            //     animation: heartBeat 1s infinite;
+            //     transition: .2s;
+            // }
 
             &.loaded{
                 &:after{
@@ -74,7 +80,9 @@
                 }
             }
             &.selected{
-                border: 4px solid $sitecolor;
+                border-radius: 5px;
+                box-shadow: 0 0 1px 4px $sitecolor2;
+                transform: scale(1.1);
             }
 
             img{
@@ -83,7 +91,51 @@
                 object-fit: cover;
                 filter: blur(5px);
                 transition: .2s;
+                border-radius: 5px;
             }
+
+        }
+
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            circle{
+                stroke-dashoffset: 500;
+            }
+        }
+
+    }
+
+
+    .file_details{
+        display: none;
+        margin: 30px 0;
+        padding: 30px;
+        border: 1px solid $sitecolor2;
+        border-radius: 20px;
+        width: max-content;
+
+        h5{
+            margin-bottom: 30px;
+            font-family: $isbold;
+            font-size: 18px;
+        }
+        .check_tags{
+            label{
+                @include tag($tagbgcolor);
+                margin-right: 10px;
+                font-size: 12px;
+                color: $darkblue2;
+                &.active{
+                    background-color: $sitecolor2;
+                    color: white;
+                    border: none;
+                }
+            }
+
         }
     }
 }

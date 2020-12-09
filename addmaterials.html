@@ -149,9 +149,37 @@
                         <label>Browse image...</label>
                         <label>Browse <input type="file" name="images" multiple></label>
                     </div>
-                    
-                    <div class="images_loading" id="mainphotos">
+                    <div class="files_loading image_selectable" id="mainphotos"></div>
+
+
+                    <!-- Uploading files -->
+                    <div class="file_upload">
+                        <label class="mb-3 smallheading">Upload textures - <i>(.zip)</i></label>
+                        <div class="fileinput async" data-imagesblock="#textures">
+                            <label>Browse file...</label>
+                            <label>Browse <input type="file" name="texture"></label>
+                        </div>
+                        <div class="files_loading" id="textures"></div>
+
+
+                        <div class="file_details">
+                            <h5 class="heading">Details of uploaded file</h5>
+
+                            <h6 class="smallheading my-3 darkblue">Texture resolution</h6>
+                            <div class="check_tags resolutions">
+                                <label>1024x</label>
+                                <label>2048x</label>
+                                <label>4096x</label>
+                                <label>8192x</label>
+                            </div>
+
+                            <h6 class="smallheading my-3 mt-5 darkblue">Texture Types</h6>
+
+
+                        </div>
                     </div>
+
+                    
 
 
                 </div>

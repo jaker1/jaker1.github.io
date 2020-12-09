@@ -103,10 +103,14 @@
     $lightgrey4: #f7f7f7;
     $lightgrey5: rgba(#C6C6C6,0.5);
     
+    // Color for tags to be different from body Bg
+    $tagbgcolor: #D8DCE8;
 
     $darkblue: #5B627D;
     $darkblue2: #8088a7;
     $lightblue: #CDD3EA;
+
+    
     
 
     $sitecolor : #2DD5A1;
@@ -119,6 +123,7 @@
     $red: #FF7474;
 
     $bodybg: #ECEEF5;
+    $bodybg2: #F2F2F2;
 
     // Breakpoints
     $xs: "max-width: 576px";
@@ -547,6 +552,13 @@ label{
     border-radius: $radius;
     background:$bg;
     box-shadow: $shadow;
+    color: $color;
+}
+@mixin tag($bg, $color : white){
+    padding: 8px 15px;
+    font-size: $small;
+    background-color: $bg;
+    border-radius: 300px;
     color: $color;
 }
 
@@ -1305,6 +1317,32 @@ footer{
 
 
 
+
+
+// Animation objects
+    // Progress bar
+    svg{
+        overflow: visible;
+        width: 100px;
+        height: 100px;
+    }
+    circle{
+      fill: transparent;
+      stroke: $sitecolor2;
+      stroke-width: 5px;
+      stroke-linecap: round;
+      stroke-dasharray: 450;
+      stroke-dashoffset: 400;
+      animation: animate 1s linear infinite;
+      animation-delay: 0s;
+    
+    }
+    
+    @keyframes animate{
+      100%{
+        transform: rotate(360deg);
+      }
+    }
 
 
 
