@@ -291,6 +291,26 @@ input{
         border-color: $blue;
     }
 }
+.siteinput3{
+    padding: 14px 20px;
+    font-family: $ilight;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 100%;
+    background-color: #EDF0F7;
+    color: #546293;
+    font-size: 17px;
+    border: none;
+    transition: .2s;
+
+    &::placeholder{
+        color: #546293;
+    }
+
+    &:focus{
+        transform: scale(1.05);
+    }
+}
 
 // Custom Modal
 .sitemodal{
@@ -309,7 +329,7 @@ input{
     visibility: hidden;
 
     // Modal from the top
-    &.type2{
+    &.from_top{
         background-color: transparent;
         align-items: flex-start;
         .inner{
@@ -337,7 +357,7 @@ input{
             font-size: 18px;
         }
 
-        .buttons{
+        .buttons:not(.custom){
             margin-top: 40px;
             display: flex;
             justify-content: flex-end;
@@ -502,6 +522,28 @@ a{
 button{
     &:focus{
         outline: none;
+    }
+}
+
+.blue_button{
+    background-color: #3899FF;
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    font-family: $isbold;
+    border: none;
+    min-width: 110px;
+    text-align: center;
+    transition: .2s;
+
+    &.inactive{
+        background-color: transparent;
+        border: 1px solid #3899FF;
+        color: #3899FF;
+    }
+
+    &:not(.inactive):hover{
+        background-color: darken($color: #3899FF, $amount: 10);
     }
 }
 
