@@ -402,7 +402,6 @@ input{
 
 // Select box
 .select{
-    margin: 10px;
     .selected{
         display: flex;
         justify-content: space-between;
@@ -457,7 +456,36 @@ input{
         }
     }
 }
+// File Inputs
+.fileinput{
+    display: flex;
+    input{
+        display: none;
+    }
+    label:first-child{
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        width: 250px;
+        max-width: calc(100% - 150px);
+        margin-right: 10px;
+        box-shadow: 0 20px 20px -10px $lightgrey5;
 
+        // Cutting string
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+       
+    }
+    label:last-child{
+        background-color: $sitecolor2;
+        padding: 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 10px 20px -10px $sitecolor2;
+    }
+}
 
 
 

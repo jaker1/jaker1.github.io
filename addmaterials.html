@@ -18,17 +18,17 @@
 <body class="account">
 
     <div class="modals">
-        <div class="sitemodal" id="deletematerial">
+        <div class="sitemodal" id="addCategory">
             <div class="inner">
-                <h4>Removing material</h4>
-                <p>Are your sure to delete this material?</p>
+                <p class="darkblue">Enter name of category you wish to add</p>
+                <input type="text" class="mt-3" placeholder="Category name">
                 <div class="buttons">
                     <button class="btn_no">No</button>
                     <button class="btn_yes">Yes</button>
                 </div>
             </div>
         </div>
-        <div class="sitemodal type2" id="notifications">
+        <!-- <div class="sitemodal type2" id="addCategory">
             <div class="inner">
                 <h4>Removing material</h4>
                 <p>Are your sure to delete this material?</p>
@@ -37,7 +37,7 @@
                     <button>Yes</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <header class="type2">
@@ -174,10 +174,27 @@
                             </div>
 
                             <h6 class="smallheading my-3 mt-5 darkblue">Texture Types</h6>
-
-
                         </div>
                     </div>
+
+
+                    <div class="row m-0">
+                        <div class="select">
+                            <select name="" class="d-none"></select>
+                            <div class="selected">
+                                <label>Category</label>
+                                <i class="fal fa-chevron-down"></i>
+                            </div>
+                            <div class="options">
+                                <div class="option" data-value="1">Date</div>
+                                <div class="option" data-value="2">Popularity</div>
+                                <div class="option" data-value="3">Views</div>
+                                <div class="option" data-value="4">Downloads</div>
+                            </div>
+                        </div>
+                        <button class="add addcategrory sitemodaltrigger ml-3" data-id="#addCategory">+</button>
+                    </div>
+                    
 
                     
 
@@ -244,5 +261,6 @@
 <script src="additionals/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script type="module" src="/js/blackblock.js"></script>
+<script type="module" src="/js/addmaterials.js"></script>
 
 </html>

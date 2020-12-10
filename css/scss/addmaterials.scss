@@ -39,7 +39,6 @@
 
     .siteinput{
         width: 400px;
-        // margin-top: 20px;
     }
 
     .files_loading{
@@ -138,36 +137,21 @@
 
         }
     }
-}
 
-
-// File Inputs
-.fileinput{
-    display: flex;
-    input{
-        display: none;
+    .select{
+        .selected{
+            border-radius: 5px;
+            box-shadow: 0 20px 20px -10px $lightgrey5;;
+        }
     }
-    label:first-child{
-        background-color: white;
-        padding: 15px;
-        border-radius: 5px;
-        width: 250px;
-        max-width: calc(100% - 150px);
-        margin-right: 10px;
-        box-shadow: 0 20px 20px -10px $lightgrey5;
 
-        // Cutting string
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-       
-    }
-    label:last-child{
-        background-color: $sitecolor2;
-        padding: 15px;
+    .add{
+        @include btn1($sitecolor2, 0 10px 20px -10px lighten($sitecolor, 20));
         color: white;
-        border-radius: 5px;
-        cursor: pointer;
-        box-shadow: 0 10px 20px -10px $sitecolor2;
+        font-size: 22px;
     }
+
+
 }
+
+

@@ -219,9 +219,18 @@ $(".table .tr .fa-trash").click(function (e) {
 
 
 // Button trigger (SITEMODAL)
-$(".sitemodaltrigger").click(() => {
-    $($(this).data("id")).addClass("visible animate__animated animate__fadeIn")
-})
+$(".sitemodaltrigger").click(function (e) { 
+    var modal = $($(this).data("id"));
+
+    modal.addClass("visible animate__animated animate__fadeIn")
+    modal.find(".inner").addClass("visible animate__animated animate__fadeInDown")
+    
+    e.preventDefault()
+});
+
+
+
+
 // Fadeout sitemodal
 $("#deletematerial button").click(() => {
     $("#deletematerial").addClass("animate__animated animate__fadeOut")
@@ -258,7 +267,7 @@ $(fileinput_async).change(function (e) {
     // Showing selected images/files in ImagesBlock (.files_loading)
         var imagesBlock = $($(this).parent().parent().data("imagesblock"))[0];
         // Clearing imagesBlock
-        imagesBlock.innerHTML = ""
+        imagesBlock.innerHTML = "";
 
         // Checking for type of selected file/image -> if it is a file, then fill imagesBlock with standart file icon image
         if(fileinput_async[1].files[0].type == "application/x-zip-compressed"){
