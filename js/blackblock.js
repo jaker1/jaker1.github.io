@@ -68,7 +68,7 @@ $("header.type2 .grid_icon").click(element => {
 // Header type 2
 var header2visible = $("header.type2").is(":visible");
 if (header2visible) {
-    document.body.style.marginTop = "140px"
+    document.body.style.paddingTop = "140px"
 }
 
 // HINTS
@@ -113,9 +113,11 @@ selected.click(function (e) {
 
 option.click(function (e) {
     $(this).closest(".select").find("label")[0].textContent = this.textContent;
-    $(this).closest(".select").find("select")[0].setAttribute("value", $(this).data("value"));
+    $(this).closest(".select").find("input").val($(this).data("value"));
     $(this).closest(".options")[0].style.cssText = "visibility: hidden; opacity: 0; margin-top: 0px";
 });
+
+
 
 
 // Checkbox
@@ -197,6 +199,44 @@ if (window.innerWidth <= 992) {
 
 
 
+
+
+// MODAAAAAAAAAAAAALS
+// Button trigger (SITEMODAL)
+$(".sitemodaltrigger").click(function (e) {
+    if($(this).data("id")){
+        var modal = $($(this).data("id"));
+    }
+    else{
+        var modal = $(this).parents(".sitemodal")
+    }
+
+
+    if($(modal).hasClass("visible")){
+
+        modal.addClass("animate__animated animate__fadeOut");
+        modal.find(".inner").addClass("animate__animated animate__fadeOutUp");
+
+        setTimeout(() => {
+            modal.removeClass("visible animat__fadeIn")
+            modal.find(".inner").removeClass("visible animate__fadeInDown");
+        }, 1000);
+    }
+    else{
+        modal.addClass("visible animate__animated animate__fadeIn")
+        modal.find(".inner").addClass("visible animate__animated animate__fadeInDown")
+    
+        modal.removeClass("animate__fadeOut")
+        modal.find(".inner").removeClass("animate__fadeOutUp")
+    }
+    
+
+    
+    e.preventDefault()
+});
+
+
+
 // Deleting material --> Manual trigger of sitemodal
 $(".table .tr .fa-trash").click(function (e) {
 
@@ -216,21 +256,6 @@ $(".table .tr .fa-trash").click(function (e) {
     // slideFade($(this).parent()[0],2000)
     // $(this).parent().addClass("slideFade")
 });
-
-
-// Button trigger (SITEMODAL)
-$(".sitemodaltrigger").click(function (e) { 
-    var modal = $($(this).data("id"));
-
-    modal.addClass("visible animate__animated animate__fadeIn")
-    modal.find(".inner").addClass("visible animate__animated animate__fadeInDown")
-    
-    e.preventDefault()
-});
-
-
-
-
 // Fadeout sitemodal
 $("#deletematerial button").click(() => {
     $("#deletematerial").addClass("animate__animated animate__fadeOut")

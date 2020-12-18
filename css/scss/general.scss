@@ -174,6 +174,104 @@
 
 
 // GENERAL
+// Mixins
+@mixin sitebtn($shadow: 1) {
+    border-radius: 5px;
+    color: white;
+    background-color: $sitecolor;
+    transition: 0.2s;
+    padding: 10px 40px;
+    border: none;
+    &:hover{
+        color: white;
+        background-color: darken($color: $sitecolor, $amount: 10);        
+    }
+    @if $shadow == 1 {
+        box-shadow: 0 0 20px #00C176;
+    }
+}
+@mixin coolbtn{
+    display: inline-block;
+    border-radius: 500px;
+    color: white;
+    background: linear-gradient(to right, #00C176, #00FFAB);
+    transition: 0.2s;
+    padding: 10px 0;
+    width: 180px;
+    text-align: center;
+    &:hover{
+        color: white;
+        background: linear-gradient(to right, #00FFAB, #00C176);        
+    }
+
+}
+@mixin round_btn($bg, $shadow: "none"){
+    padding: 10px 20px;
+    border-radius: 100px;
+    background:$bg;
+    box-shadow: $shadow;
+    transition: .2s;
+    border: none;
+    &:hover{
+        background-color: darken($bg,5);
+    }
+}
+
+
+@mixin btn1($bg, $shadow: "none"){
+    padding: 10px 20px;
+    border-radius: 5px;
+    background:$bg;
+    box-shadow: $shadow;
+    border: none;
+    transition: .2s;
+
+    &:hover{
+        background-color: darken($bg,10);
+    }
+}
+@mixin white_btn{
+    padding: 10px 30px;
+    border-radius: 100px;
+    background: white;
+    box-shadow: 0 10px 40px rgba(255,255,255,.5);
+    color: black;
+    text-align: center;
+}
+@mixin btn($radius, $padding, $bg, $color ,$shadow: none ){
+    padding: $padding;
+    border-radius: $radius;
+    background:$bg;
+    box-shadow: $shadow;
+    color: $color;
+}
+@mixin tag($bg, $color : white){
+    padding: 8px 15px;
+    font-size: $small;
+    background-color: $bg;
+    border-radius: 300px;
+    color: $color;
+}
+
+// Headings
+@mixin title($fontsize:25px){
+    color: $darkblue;
+    text-transform: uppercase;
+    font-family: $ibold;
+    font-size: $fontsize;
+
+}
+
+
+// Inputs
+@mixin input1() {
+    padding: 20px;
+    border: none;
+    min-width: 400px;
+    max-width: 100%;
+    border-radius: 5px;
+
+}
 
 // Text selection
 html {
@@ -547,110 +645,16 @@ button{
     }
 }
 
+.sitebtn{
+    @include sitebtn;
+}
+
 // Text blocks(Label ,Span, i)
 label{
     margin: 0;
 }
 
 
-// Mixins
-@mixin sitebtn($shadow: 1) {
-    border-radius: 5px;
-    color: white;
-    background-color: $sitecolor;
-    transition: 0.2s;
-    padding: 10px 40px;
-    border: none;
-    &:hover{
-        color: white;
-        background-color: darken($color: $sitecolor, $amount: 10);        
-    }
-    @if $shadow == 1 {
-        box-shadow: 0 0 20px #00C176;
-    }
-}
-@mixin coolbtn{
-    display: inline-block;
-    border-radius: 500px;
-    color: white;
-    background: linear-gradient(to right, #00C176, #00FFAB);
-    transition: 0.2s;
-    padding: 10px 0;
-    width: 180px;
-    text-align: center;
-    &:hover{
-        color: white;
-        background: linear-gradient(to right, #00FFAB, #00C176);        
-    }
-
-}
-@mixin round_btn($bg, $shadow: "none"){
-    padding: 10px 20px;
-    border-radius: 100px;
-    background:$bg;
-    box-shadow: $shadow;
-    transition: .2s;
-    border: none;
-    &:hover{
-        background-color: darken($bg,5);
-    }
-}
-
-
-@mixin btn1($bg, $shadow: "none"){
-    padding: 10px 20px;
-    border-radius: 5px;
-    background:$bg;
-    box-shadow: $shadow;
-    border: none;
-    transition: .2s;
-
-    &:hover{
-        background-color: darken($bg,10);
-    }
-}
-@mixin white_btn{
-    padding: 10px 30px;
-    border-radius: 100px;
-    background: white;
-    box-shadow: 0 10px 40px rgba(255,255,255,.5);
-    color: black;
-    text-align: center;
-}
-@mixin btn($radius, $padding, $bg, $color ,$shadow: none ){
-    padding: $padding;
-    border-radius: $radius;
-    background:$bg;
-    box-shadow: $shadow;
-    color: $color;
-}
-@mixin tag($bg, $color : white){
-    padding: 8px 15px;
-    font-size: $small;
-    background-color: $bg;
-    border-radius: 300px;
-    color: $color;
-}
-
-// Headings
-@mixin title($fontsize:25px){
-    color: $darkblue;
-    text-transform: uppercase;
-    font-family: $ibold;
-    font-size: $fontsize;
-
-}
-
-
-// Inputs
-@mixin input1() {
-    padding: 20px;
-    border: none;
-    min-width: 400px;
-    max-width: 100%;
-    border-radius: 5px;
-
-}
 
 
 
