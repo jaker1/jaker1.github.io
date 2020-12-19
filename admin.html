@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="additionals/fonts/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="additionals/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="additionals/froala/css/froala_editor.pkgd.min.css">
 
     <link rel="stylesheet" href="additionals/animate/animate.min.css">
     <link rel="stylesheet" href="css/admin.min.css">
@@ -114,6 +115,13 @@
             </ol>
         </nav>
 
+        <div class="email">
+            <h4 class="heading mb-4">Send Email</h4>
+            <textarea name="" id="email"></textarea>
+            <button class="sitebtn2 mt-5">Send</button>
+        </div>
+
+
         <div class="stats">
             <div class="stat">
                 <p><i class="fal fa-coins"></i> Earnings</p>
@@ -142,6 +150,7 @@
             </div>
 
         </div>
+
 
 
         <div class="search mb-4">
@@ -214,7 +223,6 @@
             <li><a href="">5</a></li>
             <li><a href=""><i class="fal fa-chevron-double-right"></i></a></li>
         </div>
-
         <div class="table mt-5" data-md="3,4,7,8">
             <div class="tr captions">
                 <div>#</div>
@@ -286,6 +294,8 @@
             </div>
         </div>
 
+
+
         
     </main>
 
@@ -340,5 +350,33 @@
 
 <script type="module" src="/js/blackblock.js"></script>
 <script src="/js/admin.js"></script>
+
+<!-- Additionals -->
+<script type="text/javascript" src="additionals/froala/js/froala_editor.pkgd.min.js"></script>
+<script>
+    var editor = new FroalaEditor("#email",{
+        heightMin : 250,
+        fontSizeDefaultSelection: 20,
+        pluginsEnabled: ['image', 'link','fontSize'],
+        toolbarButtons: {
+            'moreText': {
+              'buttons': ['bold', 'italic', 'fontSize','underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'textColor', 'backgroundColor', 'inlineClass', 'inlineStyle', 'clearFormatting']
+            },
+            'moreParagraph': {
+              'buttons': ['alignLeft', 'alignCenter', 'formatOLSimple', 'alignRight', 'alignJustify', 'formatOL', 'formatUL', 'paragraphFormat', 'paragraphStyle', 'lineHeight', 'outdent', 'indent', 'quote']
+            },
+            'moreRich': {
+              'buttons': ['insertLink', 'insertImage', 'insertVideo', 'insertTable', 'emoticons', 'fontAwesome', 'specialCharacters', 'embedly', 'insertFile', 'insertHR']
+            },
+            'moreMisc': {
+              'buttons': ['undo', 'redo', 'fullscreen', 'print', 'getPDF', 'spellChecker', 'selectAll', 'html', 'help'],
+              'align': 'right',
+              'buttonsVisible': 2
+            },
+            
+        }
+    })
+</script>
+
 
 </html>

@@ -652,6 +652,12 @@ button{
     padding-left: 30px;
     padding-right: 30px;
 }
+.sitebtn2{
+    @include btn1($sitecolor2, 0 5px 20px lighten($sitecolor2, 20));
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 
 // Text blocks(Label ,Span, i)
 label{
