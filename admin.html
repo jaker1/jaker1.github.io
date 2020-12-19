@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/logo/texturestorage2.png">
+
+    <link rel="stylesheet" href="additionals/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="additionals/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="additionals/animate/animate.min.css">
+    <link rel="stylesheet" href="css/admin.min.css">
+
+</head>
+
+<body class="account">
+
+    <div class="modals">
+        <div class="sitemodal" id="removeUser">
+            <div class="inner">
+                <h4>Removing material</h4>
+                <p>Are your sure to delete this material?</p>
+                <div class="buttons">
+                    <button class="btn_no sitemodaltrigger">No</button>
+                    <button class="btn_yes sitemodaltrigger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="type2">
+        <div class="left">
+            <div class="textlogo">
+                <img src="img/logo/logo_white.png" alt="TextureStorage">
+                <h3>Texturestorage</h3>
+            </div>
+            <div class="grid_icon">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <li><a href="">Materials</a></li>
+                <li><a href="#about" class="slideto">About Us</a></li>
+                <li><a href="#plans" class="slideto">Pricing</a></li>
+                <li><a href="">FAQ</a></li>
+            </nav>
+
+        </div>
+        <div class="middle">
+            <div class="search">
+                <input type="text" class="search" name="search"
+                    placeholder="Search here materials, models and imperfections" autocomplete="off">
+                <i class="fal fa-search"></i>
+
+                <div class="hints">
+                    <a href=""><li>Cubic World</li></a>
+                    <a href=""><li>Minecraft</li></a>
+                    <a href=""><li>Bedwars</li></a>
+                    <a href=""><li>Kingdom Come</li></a>
+                    <a href=""><li>Vikings Age</li></a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Menu for windows less than 768px -->
+        <menu>
+            <nav>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Materials</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">FAQ</a></li>
+            </nav>
+        </menu>
+
+        <nav class="leftmenu">
+            <div class="type1 active">
+                <li><a href="" data-toggle="tooltip" data-placement="right" title="Users"><i class="fal fa-users"></i></a></li>
+                <li><a href="" class="active"><i class="fal fa-clipboard-list"></i></a></li>
+                <li><a href=""><i class="fal fa-analytics"></i></a></li>
+            </div>
+            <div class="type2">
+                <li><a href="" class="active"><i class="fal fa-user"></i>Users</a></li>
+                <li><a href=""><i class="fal fa-clipboard-list"></i> Posts</a></li>
+                <li><a href=""><i class="fal fa-shopping-cart"></i> Statistics</a></li>
+            </div>
+        </nav>
+
+        <!-- Placing right div lastly, to ensure that is will stick to the right -->
+        <div class="right d-flex align-items-center">
+            <a href="" class="login">Login</a>
+            <div class="menu-btn">
+                <span></span>
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <main class="container">
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb type2">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+
+        <div class="stats">
+            <div class="stat">
+                <p><i class="fal fa-coins"></i> Earnings</p>
+                <label><span>$</span>650</label>
+                <i class="fas fa-coins"></i>
+            </div>
+            <div class="stat">
+                <p><i class="fal fa-coins"></i> Earnings</p>
+                <label><span>$</span>650</label>
+            </div>
+            <div class="stat">
+                <p><i class="fal fa-coins"></i> Earnings</p>
+                <label><span>$</span>650</label>
+            </div>
+            <div class="stat">
+                <p><i class="fal fa-coins"></i> Earnings</p>
+                <label><span>$</span>650</label>
+            </div>
+            <div class="stat">
+                <p><i class="fal fa-coins"></i> Earnings</p>
+                <label><span>$</span>650</label>
+            </div>
+            <div class="stat">
+                <p><i class="fal fa-coins"></i> Earnings</p>
+                <label><span>$</span>650</label>
+            </div>
+
+        </div>
+
+
+        <div class="search mb-4">
+            <input type="text" class="siteinput" placeholder="Search for users">
+            <button class="sitebtn ml-3">Search</button>
+        </div>
+        <div class="users d-flex justify-content-between">
+
+                <div class="card user_card">
+                    <img src="/img/temp/kingdom.jpg">
+                    <h6>Erikson</h6>
+                    <p class="email">erik.raimov@mail.com</p>
+                    <div class="details">
+                        <p>Patreon : <span>Yes</span></p>
+                        <p>Plan Tier : <span class="black">Basic</span></p>
+                    </div>
+                    <div class="actions">
+                        <a class="send_email">Send Email</a>
+                        <i class="fas fa-trash sitemodaltrigger" data-id="#removeUser"></i>
+                    </div>
+                </div>
+                <div class="card user_card">
+                    <img src="/img/temp/kingdom.jpg">
+                    <h6>Erikson</h6>
+                    <p class="email">erik.raimov@mail.com</p>
+                    <div class="details">
+                        <p>Patreon : <span>Yes</span></p>
+                        <p>Plan Tier : <span class="black">Basic</span></p>
+                    </div>
+                    <div class="actions">
+                        <a class="send_email">Send Email</a>
+                        <i class="fas fa-trash sitemodaltrigger" data-id="#removeUser"></i>
+                    </div>
+                </div>
+                <div class="card user_card">
+                    <img src="/img/temp/kingdom.jpg">
+                    <h6>Erikson</h6>
+                    <p class="email">erik.raimov@mail.com</p>
+                    <div class="details">
+                        <p>Patreon : <span>Yes</span></p>
+                        <p>Plan Tier : <span class="black">Basic</span></p>
+                    </div>
+                    <div class="actions">
+                        <a class="send_email">Send Email</a>
+                        <i class="fas fa-trash sitemodaltrigger" data-id="#removeUser"></i>
+                    </div>
+                </div>
+                <div class="card user_card">
+                    <img src="/img/temp/kingdom.jpg">
+                    <h6>Erikson</h6>
+                    <p class="email">erik.raimov@mail.com</p>
+                    <div class="details">
+                        <p>Patreon : <span>Yes</span></p>
+                        <p>Plan Tier : <span class="black">Basic</span></p>
+                    </div>
+                    <div class="actions">
+                        <a class="send_email">Send Email</a>
+                        <i class="fas fa-trash sitemodaltrigger" data-id="#removeUser"></i>
+                    </div>
+                </div>
+                
+
+        </div>
+        <div class="pagination">
+            <li><a href=""><i class="fal fa-chevron-double-left"></i></a></li>
+            <li><a href="" class="active">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li><a href=""><i class="fal fa-chevron-double-right"></i></a></li>
+        </div>
+
+        <div class="table mt-5" data-md="3,4,7,8">
+            <div class="tr captions">
+                <div>#</div>
+                <div>Basic info</div>
+                <div>Section</div>
+                <div>Date</div>
+                <div>Views</div>
+                <div>Downloads</div>
+                <div>Status</div>
+                <div>Price</div>
+            </div>
+            <a href="">
+                <div class="tr">
+                    <div>1</div>
+                    <div class="b_info">
+                        <img src="/img/temp/4.png" alt="">
+                        <label for="">Obsidian</label>
+                    </div>
+                    <div>Textures</div>
+                    <div>March 10, 2017</div>
+                    <div>2040</div>
+                    <div>354</div>
+                    <div class="text-warning">Under Review</div>
+                    <div>$40</div>
+                    <i class="far fa-trash"></i>
+                </div>
+            </a>
+            <div class="tr">
+                <div>1</div>
+                <div class="b_info">
+                    <img src="/img/temp/4.png" alt="">
+                    <label for="">Iron block with gold</label>
+                </div>
+                <div>Textures</div>
+                <div>March 10, 2017</div>
+                <div>2040</div>
+                <div>354</div>
+                <div class="text-danger">Declined</div>
+                <div>$40</div>
+                <i class="far fa-trash"></i>
+            </div>
+            <div class="tr">
+                <div>1</div>
+                <div class="b_info">
+                    <img src="/img/temp/4.png" alt="">
+                    <label for="">Obsidian</label>
+                </div>
+                <div>Textures</div>
+                <div>March 10, 2017</div>
+                <div>2040</div>
+                <div>354</div>
+                <div class="text-success">Valid</div>
+                <div>$40</div>
+                <i class="far fa-trash"></i>
+            </div>
+            <div class="tr">
+                <div>1</div>
+                <div class="b_info">
+                    <img src="/img/temp/4.png" alt="">
+                    <label for="">Obsidian</label>
+                </div>
+                <div>Textures</div>
+                <div>March 10, 2017</div>
+                <div>2040</div>
+                <div>354</div>
+                <div>Valid</div>
+                <div>$40</div>
+                <i class="far fa-trash"></i>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <div class="offer d-flex justify-content-between ">
+            <h5>Seeking materials for better renders?</h5>
+            <a href="">Explore</a>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 col-12 p-0">
+                <h2>Texture | Storage</h2>
+                <p>Website where you can find wide range of textures, models and imperfections. Inspire and reveal your
+                    texturing skills!</p>
+                <hr>
+                <h6>For any questions, contact:</h5>
+                    <i class="fas fa-envelope"></i>
+                    <label>texturestorage@mail.ru</label>
+            </div>
+            <div class="col-lg-4 py-4 py-lg-0 col-12 p-0">
+                <h5>Useful links</h5>
+                <ul>
+                    <li><a href="">Textures</a></li>
+                    <li><a href="">Models</a></li>
+                    <li><a href="">Imperfections</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-12 p-0">
+                <h6>Find Us</h6>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="bottom">
+            <hr>
+            <div>
+                <label>© TextureStorage 2020. All rights reserved.</label>
+                <div>
+                    <a href="">Leave your feedback</a>
+                    <a href="">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="additionals/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script type="module" src="/js/blackblock.js"></script>
+<script src="/js/admin.js"></script>
+
+</html>

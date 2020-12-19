@@ -283,6 +283,7 @@ body {
 }
 main{
     min-height: 100vh;
+    padding: 50px;
 }
 *::selection{
     color: white;
@@ -646,7 +647,10 @@ button{
 }
 
 .sitebtn{
-    @include sitebtn;
+    @include btn1($sitecolor2);
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 // Text blocks(Label ,Span, i)
@@ -1049,6 +1053,10 @@ header.type2{
     }
 
     .leftmenu{
+
+        @include md{
+            display: none;
+        }
         
         .type1, .type2{
             position: fixed;
@@ -1388,6 +1396,188 @@ footer{
     }
     
 }
+
+
+// Stats
+.stats{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    .stat{
+        width: 18%;
+        background-color: white;
+        padding: 40px;
+        height: 190px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px -10px $lightgrey3;
+        margin-bottom: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        transition: .3s;
+        top: 0px;
+        cursor: pointer;
+
+
+        // If icon exists, set it to background
+        position: relative;
+        overflow: hidden;
+        &>i{
+            font-size: 150px;
+            color: lighten($color: $sitecolor4, $amount: 10);
+            position: absolute;
+            transform: translate(-45%, 50%);
+        }
+
+        // Hover effect
+        &:hover{
+            top: -10px;
+
+        }
+
+        p{
+            z-index: 2;
+            text-transform: uppercase;
+            color: $darkblue;
+            i{
+                font-size: 25px;
+                margin-right: 5px;
+            }
+        }
+        label{
+            z-index: 2;
+            font-size: 30px;
+            font-family: $isbold;
+            color: $sitecolor;
+            span{
+                font-size: 16px;
+            }
+        }
+
+        &:first-child{
+            background-color: $sitecolor4;
+            color: white;
+            box-shadow: 0 0 20px lighten($color: $sitecolor, $amount: 20);
+            p{
+                color: lighten($color: $sitecolor, $amount: 35);
+            }
+            label{
+                color: white;
+            }
+        }
+    }
+
+}
+
+
+// Pagination
+.pagination{
+    margin-top: 40px;
+    // width: 400px;
+    // display: flex;
+    // justify-content: space-between;
+    li{
+        width: 40px;
+        a{
+            color: $darkblue;
+            padding: 10px;
+            border-radius: 5px;
+
+            &.active{
+                background-color: #fff;
+                box-shadow: 0 5px 30px -10px lighten($darkblue, 30);
+            }
+            &:hover{
+                background-color: #fff;
+            }
+            i{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+.table{
+    width: 100%;
+    .tr{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 15px 20px;
+        
+        margin-bottom: 20px;
+        border-radius: 10px;
+        width: calc(100% - 70px);
+        position: relative;
+        transition: .2s;
+        color: $darkgrey;
+        max-height: 200px;
+
+        &:not(.captions):hover{
+            box-shadow: 0 10px 20px -10px $lightgrey3;
+            transform: scale(1.01);
+        }
+
+
+        div{
+            width: 12.5%;
+            text-align: center;
+
+            &.b_info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img{
+                    width: 30px;
+                }
+                label{
+                    overflow: hidden;
+                    width: 80px;
+                    height: 22px;
+                }
+            }
+        }
+
+        &.captions{
+            background-color: transparent;
+            color: $darkblue;
+            padding: 0 20px;
+            font-family: $isbold;
+        }
+        &>i{
+            background-color: $red;
+            color: white;
+            padding: 18px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover{
+                background-color: lighten($red, 5);
+            }
+            position: absolute;
+            right: -70px;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

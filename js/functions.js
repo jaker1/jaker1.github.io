@@ -4,3 +4,10 @@ export function isVisible(el){
     }
     return true;
 }
+
+// Object.isVisible = () => {
+//     if(window.getComputedStyle(this).display === "none" || window.getComputedStyle(this).visibility === "hidden"){
+//         return false;
+//     }
+//     return true;
+// }

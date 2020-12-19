@@ -2,7 +2,6 @@
 var trending = $(".trending");
 var inner = trending.find(".inner");
 var inner_divs_num = inner.find("div").length;
-console.log(inner_divs_num)
 let left = 0;
 
 // Setting indicator width

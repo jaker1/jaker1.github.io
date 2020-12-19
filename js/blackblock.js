@@ -68,7 +68,7 @@ $("header.type2 .grid_icon").click(element => {
 // Header type 2
 var header2visible = $("header.type2").is(":visible");
 if (header2visible) {
-    document.body.style.paddingTop = "140px"
+    document.body.style.paddingTop = "80px"
 }
 
 // HINTS
